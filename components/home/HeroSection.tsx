@@ -83,7 +83,7 @@ export default function HeroSection() {
               </motion.div>
 
               {/* Icon 2: Occupational */}
-              <motion.div style={{ y: icon2Y }} className="absolute -bottom-4 left-6 z-20">
+              <motion.div style={{ y: icon2Y }} className="absolute -bottom-6 -left-4 z-20">
                 <motion.div
                   animate={{ y: [0, 10, 0], x: [0, -8, 0], rotate: [0, -4, 4, 0] }}
                   transition={{ repeat: Infinity, duration: 4.5, ease: 'easeInOut' }}
