@@ -36,8 +36,13 @@ export default function AboutPage() {
     <div className="bg-bg-light">
       
       {/* Page Header */}
-      <section className="bg-primary text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center lg:text-left">
+      <section className="relative bg-primary text-white py-16 md:py-24 overflow-hidden">
+        {/* Background Image overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none" 
+          style={{ backgroundImage: `url('/images/child_therapy_hero.png')` }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center lg:text-left">
           <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
             Who We Are
           </span>

@@ -28,6 +28,7 @@ export default function OccupationalTherapyPage() {
       title="Occupational Therapy (OT)"
       boldSentence="Developing independence in daily activities through structured motor skill training, adaptive techniques, and sensory integration."
       breadcrumbs={breadcrumbs}
+      imageUrl="/images/child_occupational_therapy.png"
     >
       
       {/* What is Section */}

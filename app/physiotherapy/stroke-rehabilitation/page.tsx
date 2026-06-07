@@ -19,6 +19,7 @@ export default function StrokeRehabilitationPage() {
       boldSentence="Specialized clinical care for hemiplegia, gait training, and neuroplasticity-based stroke recovery in Namakkal."
       breadcrumbs={breadcrumbs}
       ctaText="Book Your Appointment"
+      imageUrl="/images/child_pediatric_physiotherapy.png"
     >
       
       {/* What is Section */}

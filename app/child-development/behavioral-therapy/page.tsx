@@ -28,6 +28,7 @@ export default function BehavioralTherapyPage() {
       title="Behavioral Therapy"
       boldSentence="Structured behavior modification techniques based on ABA principles to replace challenging actions with positive behaviors."
       breadcrumbs={breadcrumbs}
+      imageUrl="/images/child_behavioral_therapy.png"
     >
       
       {/* What is Section */}

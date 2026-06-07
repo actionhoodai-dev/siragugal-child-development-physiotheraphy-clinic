@@ -19,6 +19,7 @@ export default function BackPainPage() {
       boldSentence="Relieving lumbar strain, sciatica, and posture-related lower back pain through core stabilization in Namakkal."
       breadcrumbs={breadcrumbs}
       ctaText="Book Your Appointment"
+      imageUrl="/images/child_pediatric_physiotherapy.png"
     >
       
       {/* What is Section */}

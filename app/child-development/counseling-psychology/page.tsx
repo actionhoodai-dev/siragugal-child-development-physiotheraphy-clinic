@@ -28,6 +28,7 @@ export default function CounselingPsychologyPage() {
       title="Counseling Psychology"
       boldSentence="Cognitive, emotional, and behavioral assessments with supportive therapeutic interventions for children and their families."
       breadcrumbs={breadcrumbs}
+      imageUrl="/images/child_counseling_psychology.png"
     >
       
       {/* What is Section */}

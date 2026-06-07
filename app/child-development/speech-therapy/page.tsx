@@ -28,6 +28,7 @@ export default function SpeechTherapyPage() {
       title="Speech & Language Therapy"
       boldSentence="Improving communication, language processing, and articulation in children and adults to build expressive confidence."
       breadcrumbs={breadcrumbs}
+      imageUrl="/images/child_speech_therapy.png"
     >
       
       {/* What is Section */}

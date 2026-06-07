@@ -19,6 +19,7 @@ export default function NeckPainPage() {
       boldSentence="Cervical spondylosis, whiplash, muscle spasms, and postural correction therapies in Namakkal."
       breadcrumbs={breadcrumbs}
       ctaText="Book Your Appointment"
+      imageUrl="/images/child_pediatric_physiotherapy.png"
     >
       
       {/* What is Section */}

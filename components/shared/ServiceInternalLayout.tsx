@@ -14,6 +14,7 @@ interface ServiceInternalLayoutProps {
   boldSentence: string;
   breadcrumbs: BreadcrumbItem[];
   ctaText?: string;
+  imageUrl?: string;
   children: React.ReactNode;
 }
 
@@ -22,6 +23,7 @@ export default function ServiceInternalLayout({
   boldSentence,
   breadcrumbs,
   ctaText = 'Book a Free Assessment',
+  imageUrl,
   children,
 }: ServiceInternalLayoutProps) {
   return (
@@ -32,13 +34,21 @@ export default function ServiceInternalLayout({
         <BreadcrumbNav items={breadcrumbs} />
 
         {/* Hero Section */}
-        <header className="bg-primary text-white rounded-2xl shadow-lg p-6 md:p-10 mb-8 md:mb-12 border border-white/5">
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold mb-4 uppercase tracking-tight leading-tight">
-            {title}
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl font-semibold text-secondary max-w-4xl leading-relaxed">
-            {boldSentence}
-          </p>
+        <header className="relative bg-primary text-white rounded-2xl shadow-lg p-6 md:p-10 mb-8 md:mb-12 border border-white/5 overflow-hidden">
+          {imageUrl && (
+            <div 
+              className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none" 
+              style={{ backgroundImage: `url('${imageUrl}')` }}
+            />
+          )}
+          <div className="relative z-10">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold mb-4 uppercase tracking-tight leading-tight">
+              {title}
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl font-semibold text-secondary max-w-4xl leading-relaxed">
+              {boldSentence}
+            </p>
+          </div>
         </header>
 
         {/* Content & Sidebar Grid */}

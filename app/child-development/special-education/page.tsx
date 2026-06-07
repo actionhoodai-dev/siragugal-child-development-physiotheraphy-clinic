@@ -28,6 +28,7 @@ export default function SpecialEducationPage() {
       title="Special Education Services"
       boldSentence="Customized educational strategies and multisensory learning for children with learning differences and developmental delays."
       breadcrumbs={breadcrumbs}
+      imageUrl="/images/child_special_education.png"
     >
       
       {/* What is Section */}

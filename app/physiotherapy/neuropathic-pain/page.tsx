@@ -19,6 +19,7 @@ export default function NeuropathicPainPage() {
       boldSentence="Relieving diabetic neuropathy, burning, tingling, and chronic nerve pain using TENS and nerve mobilization in Namakkal."
       breadcrumbs={breadcrumbs}
       ctaText="Book Your Appointment"
+      imageUrl="/images/child_pediatric_physiotherapy.png"
     >
       
       {/* What is Section */}

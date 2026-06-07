@@ -19,6 +19,7 @@ export default function ShoulderPainPage() {
       boldSentence="Effective physical rehabilitation for rotator cuff injuries, frozen shoulder, and impingement syndrome in Namakkal."
       breadcrumbs={breadcrumbs}
       ctaText="Book Your Appointment"
+      imageUrl="/images/child_pediatric_physiotherapy.png"
     >
       
       {/* What is Section */}

@@ -19,6 +19,7 @@ export default function DiscProblemsPage() {
       boldSentence="Clinical care for herniated discs, bulging discs, and spinal stenosis using mechanical spinal decompression and traction in Namakkal."
       breadcrumbs={breadcrumbs}
       ctaText="Book Your Appointment"
+      imageUrl="/images/child_pediatric_physiotherapy.png"
     >
       
       {/* What is Section */}
