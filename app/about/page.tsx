@@ -136,7 +136,7 @@ export default function AboutPage() {
                 className={`p-6 border border-text-dark/5 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between ${pr.color.replace('border-primary', 'border-primary/25').replace('border-secondary', 'border-secondary/25').replace('border-accent', 'border-accent/25').replace('border-bg-dark', 'border-bg-dark/25')}`}
               >
                 <div>
-                  <h3 className="text-lg font-display font-extrabold uppercase tracking-wider mb-4 border-b border-white/20 pb-2">
+                  <h3 className="text-lg font-display font-extrabold uppercase tracking-wider mb-4 border-b border-white/20 pb-2 text-inherit">
                     {pr.title}
                   </h3>
                   <p className="text-xs md:text-sm font-semibold leading-relaxed">

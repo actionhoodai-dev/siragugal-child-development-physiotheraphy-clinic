@@ -41,7 +41,7 @@ export default function Footer() {
             <h3 className="font-display font-bold text-lg text-white border-b-2 border-secondary pb-2 inline-block">
               Quick Links
             </h3>
-            <ul className="grid grid-cols-2 gap-2 text-sm text-gray-300">
+            <ul className="flex flex-col gap-2.5 text-sm text-gray-300">
               <li>
                 <Link href="/" className="hover:text-secondary transition-colors">Home</Link>
               </li>
