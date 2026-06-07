@@ -26,12 +26,12 @@ export default function StatsBar() {
           />
           
           {/* Static Hours Card */}
-          <div className="flex flex-col items-center justify-center text-center p-6 bg-white/5 border border-white/10 rounded-lg">
-            <span className="text-3xl md:text-4xl font-display font-extrabold text-secondary flex items-center gap-2">
-              <Clock className="h-8 w-8 text-secondary flex-shrink-0" />
-              <span className="tracking-tight">9:30 - 8:00</span>
+          <div className="flex flex-col items-center justify-center text-center p-6 bg-white/5 border border-white/10 rounded-xl">
+            <span className="text-2xl sm:text-3xl font-display font-extrabold text-secondary flex items-center gap-2 whitespace-nowrap">
+              <Clock className="h-6 w-6 text-secondary flex-shrink-0" />
+              <span className="tracking-tight">9:30 AM - 8:00 PM</span>
             </span>
-            <span className="mt-3 text-xs md:text-sm font-semibold text-white uppercase tracking-wider leading-tight">
+            <span className="mt-3 text-xs md:text-sm font-semibold text-white uppercase tracking-wider leading-tight whitespace-nowrap">
               Daily Availability (Mon-Sat)
             </span>
           </div>

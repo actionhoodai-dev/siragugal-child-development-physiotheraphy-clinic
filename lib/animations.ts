@@ -94,7 +94,7 @@ export function animateCounter(elementSelector: string, targetValue: number, dur
         toggleActions: 'play none none none',
       },
       onUpdate: () => {
-        el.textContent = Math.floor(obj.value).toLocaleString() + (targetValue === 500 ? '+' : '');
+        el.textContent = Math.floor(obj.value).toLocaleString();
       },
     });
   });

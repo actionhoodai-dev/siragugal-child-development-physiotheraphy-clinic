@@ -100,16 +100,22 @@ export default function HeroSection() {
               transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
               className="relative w-72 h-72 md:w-96 md:h-96"
             >
-              {/* Outer Bold Card (JSK Logo Card Style) */}
+              {/* Main Rounded Image */}
               <div 
-                className="absolute inset-0 bg-white border border-text-dark/5 shadow-2xl flex items-center justify-center transition-all duration-300"
+                className="absolute inset-0 border border-text-dark/5 shadow-2xl overflow-hidden transition-all duration-300"
                 style={{ borderRadius: '2rem' }}
               >
-                <div className="text-center p-8 max-w-xs z-10 select-none">
-                  <span className="font-display font-black text-primary text-3xl md:text-5xl uppercase tracking-tighter block">
-                    SIRAGUGAL
+                <img 
+                  src="/images/child_therapy_hero.png" 
+                  alt="Child Development Therapy Session at Siragugal" 
+                  className="w-full h-full object-cover" 
+                />
+                {/* Visual Overlay for branding */}
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-primary/90 to-transparent p-6 text-white pt-16">
+                  <span className="font-display font-black text-white text-xl md:text-2xl uppercase tracking-tighter block">
+                    SIRAGUGAL CLINIC
                   </span>
-                  <span className="text-secondary font-extrabold text-[10px] md:text-xs tracking-widest uppercase mt-3 block tamil-text">
+                  <span className="text-secondary font-extrabold text-[9px] tracking-widest uppercase mt-1 block tamil-text">
                     இவைகளுக்கு சிறப்பான சிகிச்சை
                   </span>
                 </div>

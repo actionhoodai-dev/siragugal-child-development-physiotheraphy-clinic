@@ -16,36 +16,42 @@ const childServices = [
     description: 'Developing independence in daily activities through structured motor skill training and sensory integration.',
     iconName: 'Activity',
     href: '/child-development/occupational-therapy',
+    imageUrl: '/images/child_occupational_therapy.png',
   },
   {
     name: 'Speech Therapy',
     description: 'Improving communication, language processing, and articulation in children and adults.',
     iconName: 'MessageSquare',
     href: '/child-development/speech-therapy',
+    imageUrl: '/images/child_speech_therapy.png',
   },
   {
     name: 'Special Education',
     description: 'Customized educational strategies for children with learning differences and developmental delays.',
     iconName: 'GraduationCap',
     href: '/child-development/special-education',
+    imageUrl: '/images/child_special_education.png',
   },
   {
     name: 'Behavioral Therapy',
     description: 'Structured behavior modification techniques based on ABA principles for lasting positive change.',
     iconName: 'Brain',
     href: '/child-development/behavioral-therapy',
+    imageUrl: '/images/child_behavioral_therapy.png',
   },
   {
     name: 'Counseling Psychology',
     description: 'Cognitive and behavioral assessments with therapeutic interventions for children and families.',
     iconName: 'Users',
     href: '/child-development/counseling-psychology',
+    imageUrl: '/images/child_counseling_psychology.png',
   },
   {
     name: 'Pediatric Physiotherapy',
     description: 'Physical rehabilitation for developmental coordination disorders, cerebral palsy, and juvenile bone/joint conditions.',
     iconName: 'HeartPulse',
     href: '/physiotherapy',
+    imageUrl: '/images/child_pediatric_physiotherapy.png',
   },
 ];
 
@@ -117,6 +123,7 @@ export default function ChildDevelopmentHub() {
                 description={service.description}
                 iconName={service.iconName}
                 href={service.href}
+                imageUrl={service.imageUrl}
               />
             ))}
           </div>

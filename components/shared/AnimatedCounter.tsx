@@ -21,7 +21,7 @@ export default function AnimatedCounter({ targetValue, label, suffix = '' }: Ani
   }, [targetValue]);
 
   return (
-    <div className="flex flex-col items-center text-center p-6 bg-white/5 border border-white/10 rounded-lg">
+    <div className="flex flex-col items-center text-center p-6 bg-white/5 border border-white/10 rounded-xl">
       <span className="text-4xl md:text-5xl font-display font-extrabold text-secondary flex items-center">
         <span ref={numRef}>0</span>
         {suffix && <span>{suffix}</span>}
