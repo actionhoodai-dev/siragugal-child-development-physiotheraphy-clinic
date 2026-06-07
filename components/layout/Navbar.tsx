@@ -182,13 +182,16 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Hamburger */}
-          <div className="flex md:hidden items-center space-x-2">
-            <Link href="/contact" className="btn btn-secondary px-3 py-1.5 text-xs uppercase font-bold">
-              Book
+          <div className="flex md:hidden items-center space-x-3">
+            <Link 
+              href="/contact" 
+              className="btn btn-secondary px-4 py-2.5 text-xs uppercase font-extrabold tracking-wider"
+            >
+              Book Now
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-text-dark border border-gray-200 rounded-lg bg-white shadow-sm focus:outline-none"
+              className="p-2.5 text-text-dark border border-gray-200 rounded-lg bg-white shadow-sm focus:outline-none flex items-center justify-center"
               aria-expanded={isOpen}
               aria-label="Toggle Navigation Menu"
             >
@@ -209,31 +212,31 @@ export default function Navbar() {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="md:hidden w-full bg-white border-b border-gray-100 shadow-md overflow-y-auto"
           >
-            <div className="px-4 pt-4 pb-6 space-y-4 max-h-[80vh] overflow-y-auto">
+            <div className="px-4 pt-4 pb-6 space-y-5 max-h-[80vh] overflow-y-auto">
               <Link 
                 href="/" 
-                className={`block font-bold text-lg border-b pb-2 ${pathname === '/' ? 'text-primary' : 'text-text-dark'}`}
+                className={`block font-extrabold text-lg border-b pb-3 pt-1 ${pathname === '/' ? 'text-primary' : 'text-text-dark'}`}
               >
                 Home
               </Link>
               <Link 
                 href="/about" 
-                className={`block font-bold text-lg border-b pb-2 ${pathname === '/about' ? 'text-primary' : 'text-text-dark'}`}
+                className={`block font-extrabold text-lg border-b pb-3 pt-1 ${pathname === '/about' ? 'text-primary' : 'text-text-dark'}`}
               >
                 About Us
               </Link>
 
               {/* Flat list for Child Dev Services */}
-              <div className="space-y-2">
+              <div className="space-y-3 pt-1">
                 <span className="block text-xs font-bold text-text-mid uppercase tracking-wider">
                   Child Development Services
                 </span>
-                <div className="pl-3 border-l-2 border-accent space-y-2">
+                <div className="pl-3 border-l-2 border-accent space-y-3">
                   {childDevServices.map((service) => (
                     <Link
                       key={service.href}
                       href={service.href}
-                      className={`block text-sm font-semibold py-1 transition-colors ${
+                      className={`block text-sm font-bold py-1.5 transition-colors ${
                         pathname === service.href ? 'text-primary' : 'text-text-dark hover:text-primary'
                       }`}
                     >
@@ -245,19 +248,19 @@ export default function Navbar() {
 
               <Link 
                 href="/physiotherapy" 
-                className={`block font-bold text-lg border-b pb-2 ${pathname.startsWith('/physiotherapy') ? 'text-primary' : 'text-text-dark'}`}
+                className={`block font-extrabold text-lg border-b pb-3 pt-2 ${pathname.startsWith('/physiotherapy') ? 'text-primary' : 'text-text-dark'}`}
               >
                 Physiotherapy
               </Link>
               <Link 
                 href="/conditions" 
-                className={`block font-bold text-lg border-b pb-2 ${pathname === '/conditions' ? 'text-primary' : 'text-text-dark'}`}
+                className={`block font-extrabold text-lg border-b pb-3 pt-2 ${pathname === '/conditions' ? 'text-primary' : 'text-text-dark'}`}
               >
                 Conditions Treated
               </Link>
               <Link 
                 href="/contact" 
-                className={`block font-bold text-lg border-b pb-2 ${pathname === '/contact' ? 'text-primary' : 'text-text-dark'}`}
+                className={`block font-extrabold text-lg border-b pb-3 pt-2 ${pathname === '/contact' ? 'text-primary' : 'text-text-dark'}`}
               >
                 Contact Us
               </Link>

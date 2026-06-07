@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Sora, Nunito, Noto_Sans_Tamil } from 'next/font/google';
+import { Plus_Jakarta_Sans, Inter, Noto_Sans_Tamil } from 'next/font/google';
 import './globals.css';
 import LenisProvider from '@/components/layout/LenisProvider';
 import ScrollProgress from '@/components/layout/ScrollProgress';
@@ -7,16 +7,16 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/layout/WhatsAppButton';
 
-const sora = Sora({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-sora',
-  weight: ['400', '600', '700', '800'],
+  variable: '--font-plus-jakarta-sans',
+  weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
 });
 
-const nunito = Nunito({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-nunito',
+  variable: '--font-inter',
   weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sora.variable} ${nunito.variable} ${notoTamil.variable}`}>
+    <html lang="en" className={`${plusJakartaSans.variable} ${inter.variable} ${notoTamil.variable}`}>
       <head>
         <script
           type="application/ld+json"

@@ -152,7 +152,7 @@ export default function ContactPage() {
                   </p>
                   <button
                     onClick={() => setSubmitSuccess(false)}
-                    className="btn-primary px-6 py-2 text-xs uppercase"
+                    className="btn btn-primary px-6 py-2.5 text-xs uppercase font-extrabold"
                   >
                     Send another message
                   </button>

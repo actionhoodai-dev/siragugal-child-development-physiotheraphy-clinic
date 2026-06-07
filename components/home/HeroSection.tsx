@@ -11,8 +11,8 @@ export default function HeroSection() {
     animateHeroText('.hero-title-container');
   }, []);
 
-  const headline = 'Every Child Deserves To Reach Their Full Potential';
-  const words = headline.split(' ');
+  const clinicName = 'Siragugal Child Development & Physiotherapy Center';
+  const words = clinicName.split(' ');
 
   return (
     <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-bg-dark text-white overflow-hidden py-12 md:py-20">
@@ -26,73 +26,8 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 w-full z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column (60%) */}
-          <div className="lg:col-span-7 space-y-6 md:space-y-8">
-            
-            {/* Pill Badge */}
-            <div className="inline-flex items-center space-x-2 bg-secondary/15 border border-secondary/35 px-4 py-1.5 rounded-full">
-              <Sparkles className="h-4 w-4 text-secondary fill-secondary" />
-              <span className="text-xs md:text-sm font-extrabold text-secondary uppercase tracking-wider">
-                Namakkal's #1 Child Development Center
-              </span>
-            </div>
-
-            {/* Headline */}
-            <h1 className="hero-title-container text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white leading-tight tracking-tight">
-              {words.map((word, i) => (
-                <span key={i} className="inline-block overflow-hidden mr-3">
-                  <span className="word-reveal inline-block" style={{ opacity: 0 }}>
-                    {word}
-                  </span>
-                </span>
-              ))}
-            </h1>
-
-            {/* Sub-headline */}
-            <p className="text-base sm:text-lg md:text-xl text-white/85 font-semibold leading-relaxed max-w-2xl">
-              Specialized therapy services combining occupational, speech, behavioral, and physiotherapy care — all under one roof in Namakkal.
-            </p>
-
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Link 
-                href="/contact" 
-                className="btn btn-secondary text-center"
-              >
-                Book Free Consultation
-              </Link>
-              <Link 
-                href="/child-development" 
-                className="btn btn-outline border-white text-white hover:bg-white hover:text-bg-dark text-center"
-              >
-                Explore Services
-              </Link>
-            </div>
-
-            {/* Contact Strip */}
-            <div className="pt-6 border-t border-white/10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-bold text-white/95">
-              <a 
-                href="tel:+917338833962" 
-                className="flex items-center hover:text-secondary transition-colors"
-                aria-label="Call clinic phone: +917338833962"
-              >
-                <Phone className="h-4 w-4 text-secondary mr-2" />
-                +91 73388 33962
-              </a>
-              <a 
-                href="mailto:siragugalrehab@gmail.com" 
-                className="flex items-center hover:text-secondary transition-colors"
-                aria-label="Send email to clinic: siragugalrehab@gmail.com"
-              >
-                <Mail className="h-4 w-4 text-secondary mr-2" />
-                siragugalrehab@gmail.com
-              </a>
-            </div>
-
-          </div>
-
-          {/* Right Column (40%) - CSS Art & Floating Therapy Icons */}
-          <div className="lg:col-span-5 flex justify-center items-center h-full relative py-6 z-10">
+          {/* Right Column (40%) - Image first on mobile */}
+          <div className="lg:col-span-5 flex justify-center items-center h-full relative py-6 z-10 order-1 lg:order-2">
             
             {/* Main Badge Container (Infinite float loop) */}
             <motion.div
@@ -159,6 +94,81 @@ export default function HeroSection() {
               </motion.div>
 
             </motion.div>
+
+          </div>
+
+          {/* Left Column (60%) - Text Content second on mobile */}
+          <div className="lg:col-span-7 space-y-6 md:space-y-8 order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
+            
+            {/* Pill Badge */}
+            <div className="inline-flex items-center space-x-2 bg-secondary/15 border border-secondary/35 px-4 py-1.5 rounded-full">
+              <Sparkles className="h-4 w-4 text-secondary fill-secondary" />
+              <span className="text-xs md:text-sm font-extrabold text-secondary uppercase tracking-wider">
+                Namakkal's #1 Child Development & Rehab Hub
+              </span>
+            </div>
+
+            {/* Headline */}
+            <h1 className="hero-title-container text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white leading-tight tracking-tight">
+              {words.map((word, i) => (
+                <span key={i} className="inline-block overflow-hidden mr-3">
+                  <span className="word-reveal inline-block" style={{ opacity: 0 }}>
+                    {word}
+                  </span>
+                </span>
+              ))}
+            </h1>
+
+            {/* Short Tagline */}
+            <div className="space-y-1">
+              <span className="text-secondary font-display font-extrabold text-lg sm:text-xl md:text-2xl tracking-wide uppercase block">
+                Specialized Treatment for All Conditions
+              </span>
+              <span className="text-xs sm:text-sm md:text-base text-gray-300 font-semibold tamil-text block leading-relaxed">
+                இவைகளுக்கு சிறப்பான சிகிச்சை அளிக்கப்படும்
+              </span>
+            </div>
+
+            {/* Description */}
+            <p className="text-sm sm:text-base md:text-lg text-white/85 font-medium leading-relaxed max-w-2xl">
+              Namakkal's premier multidisciplinary center providing expert therapeutic services combining occupational, speech, behavioral, and advanced physiotherapy care under one roof.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-2 w-full sm:w-auto">
+              <Link 
+                href="/contact" 
+                className="btn btn-secondary text-center w-full sm:w-auto px-6 py-3.5 text-sm font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200"
+              >
+                Book Free Consultation
+              </Link>
+              <Link 
+                href="/child-development" 
+                className="btn bg-white text-primary hover:bg-white/90 text-center w-full sm:w-auto px-6 py-3.5 text-sm font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200"
+              >
+                Explore Services
+              </Link>
+            </div>
+
+            {/* Contact Strip */}
+            <div className="pt-6 border-t border-white/10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-bold text-white/95 justify-center lg:justify-start w-full">
+              <a 
+                href="tel:+917338833962" 
+                className="flex items-center hover:text-secondary transition-colors"
+                aria-label="Call clinic phone: +917338833962"
+              >
+                <Phone className="h-4 w-4 text-secondary mr-2" />
+                +91 73388 33962
+              </a>
+              <a 
+                href="mailto:siragugalrehab@gmail.com" 
+                className="flex items-center hover:text-secondary transition-colors"
+                aria-label="Send email to clinic: siragugalrehab@gmail.com"
+              >
+                <Mail className="h-4 w-4 text-secondary mr-2" />
+                siragugalrehab@gmail.com
+              </a>
+            </div>
 
           </div>
 

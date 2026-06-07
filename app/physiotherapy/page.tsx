@@ -146,7 +146,7 @@ export default function PhysiotherapyHub() {
           </div>
           <Link 
             href="/contact" 
-            className="btn btn-primary px-8 py-4 uppercase text-sm tracking-wider font-extrabold bg-primary text-white focus:outline-none"
+            className="btn btn-primary w-full md:w-auto px-6 py-4 uppercase text-xs sm:text-sm tracking-wider font-extrabold text-center bg-primary text-white focus:outline-none"
           >
             Book Your Physiotherapy Appointment
           </Link>

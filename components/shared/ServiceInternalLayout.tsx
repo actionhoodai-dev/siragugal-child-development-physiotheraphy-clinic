@@ -63,7 +63,7 @@ export default function ServiceInternalLayout({
               <div className="space-y-3">
                 <a 
                   href="tel:+917338833962" 
-                  className="btn-secondary w-full py-3 block text-center uppercase tracking-wider text-xs md:text-sm font-bold focus:outline-none"
+                  className="btn btn-secondary w-full py-3 block text-center uppercase tracking-wider text-xs md:text-sm font-bold focus:outline-none"
                   aria-label="Call clinic at +917338833962"
                 >
                   Call 7338833962
@@ -72,7 +72,7 @@ export default function ServiceInternalLayout({
                   href="https://wa.me/917338833962"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-outline border-white text-white hover:bg-white/10 w-full py-3 block text-center uppercase tracking-wider text-xs md:text-sm font-bold focus:outline-none"
+                  className="btn btn-outline border-white text-white hover:bg-white/10 w-full py-3 block text-center uppercase tracking-wider text-xs md:text-sm font-bold focus:outline-none"
                   aria-label="Chat on WhatsApp"
                 >
                   WhatsApp Chat
@@ -117,7 +117,7 @@ export default function ServiceInternalLayout({
           </div>
           <Link 
             href="/contact" 
-            className="btn-primary w-full md:w-auto px-8 py-3.5 text-center uppercase text-xs md:text-sm tracking-wider font-bold whitespace-nowrap focus:outline-none"
+            className="btn btn-primary w-full md:w-auto px-8 py-3.5 text-center uppercase text-xs md:text-sm tracking-wider font-bold focus:outline-none"
           >
             {ctaText}
           </Link>
