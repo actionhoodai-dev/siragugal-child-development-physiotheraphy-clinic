@@ -3,6 +3,7 @@
 import React from 'react';
 import BreadcrumbNav from './BreadcrumbNav';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface BreadcrumbItem {
   name: string;
@@ -30,24 +31,32 @@ export default function ServiceInternalLayout({
     <article className="min-h-screen bg-bg-light py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
         
-        {/* Breadcrumbs */}
-        <BreadcrumbNav items={breadcrumbs} />
-
         {/* Hero Section */}
-        <header className="relative bg-primary text-white rounded-2xl shadow-lg p-6 md:p-10 mb-8 md:mb-12 border border-white/5 overflow-hidden">
-          {imageUrl && (
-            <div 
-              className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none" 
-              style={{ backgroundImage: `url('${imageUrl}')` }}
-            />
-          )}
-          <div className="relative z-10">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold mb-4 uppercase tracking-tight leading-tight">
-              {title}
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl font-semibold text-secondary max-w-4xl leading-relaxed">
-              {boldSentence}
-            </p>
+        <header className="bg-primary text-white rounded-2xl shadow-lg mb-8 md:mb-12 border border-white/5 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 md:p-8 items-center">
+            {/* Left side (60%): Text */}
+            <div className="lg:col-span-7 space-y-4">
+              <BreadcrumbNav items={breadcrumbs} />
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
+                {title}
+              </h1>
+              <p className="text-sm sm:text-base md:text-lg font-medium text-secondary max-w-2xl leading-relaxed">
+                {boldSentence}
+              </p>
+            </div>
+            {/* Right side (40%): Image (Natural Color) */}
+            {imageUrl && (
+              <div className="lg:col-span-5 relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-white/10 shadow-md">
+                <Image 
+                  src={imageUrl} 
+                  alt={title} 
+                  fill 
+                  className="w-full h-full object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 35vw"
+                  priority
+                />
+              </div>
+            )}
           </div>
         </header>
 

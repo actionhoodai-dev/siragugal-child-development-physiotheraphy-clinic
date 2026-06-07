@@ -1,6 +1,7 @@
 import SectionHeading from '@/components/shared/SectionHeading';
 import { getMetadata } from '@/lib/metadata';
 import { CheckCircle2, MapPin, Clock, Compass } from 'lucide-react';
+import Image from 'next/image';
 
 export const metadata = getMetadata({
   title: 'About Us | Specialized Rehabilitation Clinic in Namakkal',
@@ -36,19 +37,30 @@ export default function AboutPage() {
     <div className="bg-bg-light">
       
       {/* Page Header */}
-      <section className="relative bg-primary text-white py-16 md:py-24 overflow-hidden">
-        {/* Background Image overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none" 
-          style={{ backgroundImage: `url('/images/child_therapy_hero.png')` }}
-        />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center lg:text-left">
-          <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
-            Who We Are
-          </span>
-          <h1 className="text-3xl md:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
-            About Siragugal
-          </h1>
+      <section className="bg-primary text-white py-12 md:py-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left side (60%): Text */}
+            <div className="lg:col-span-7 space-y-4 text-center lg:text-left">
+              <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
+                Who We Are
+              </span>
+              <h1 className="text-3xl md:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
+                About Siragugal
+              </h1>
+            </div>
+            {/* Right side (40%): Image (Natural Color) */}
+            <div className="lg:col-span-5 relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-white/10 shadow-md">
+              <Image 
+                src="/images/child_therapy_hero.png" 
+                alt="About Siragugal" 
+                fill 
+                className="w-full h-full object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 35vw"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
