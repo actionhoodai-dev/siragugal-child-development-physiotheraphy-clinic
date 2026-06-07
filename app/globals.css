@@ -3,25 +3,191 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAFAF8;
+  --foreground: #1A1A2E;
+  
+  --primary: #1B2A8A;
+  --secondary: #F5A800;
+  --accent: #00AACC;
+  --bg-light: #FAFAF8;
+  --bg-dark: #0D1B4B;
+  --text-dark: #1A1A2E;
+  --text-mid: #4A4A6A;
+  --success: #28A745;
+  --white: #FFFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base style resets and scroll behavior */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito), 'Nunito', sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sora), 'Sora', sans-serif;
+  color: var(--primary);
+}
+
+/* Noto Sans Tamil for Tamil language text */
+.tamil-text {
+  font-family: var(--font-noto-tamil), 'Noto Sans Tamil', sans-serif;
+}
+
+/* Custom Scroll Progress Bar style */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #F5A800; /* Bold Amber */
+  width: 0%;
+  z-index: 9999;
+}
+
+/* Custom lenis scroll requirements */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom solid box styles (Surgical precision, bold boundaries) */
+.solid-card {
+  background-color: var(--white);
+  border: 2px solid var(--text-dark);
+  box-shadow: 4px 4px 0px 0px var(--text-dark);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.solid-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--text-dark);
+}
+
+.solid-card-secondary {
+  background-color: var(--white);
+  border: 2px solid var(--secondary);
+  box-shadow: 4px 4px 0px 0px var(--secondary);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.solid-card-primary {
+  background-color: var(--white);
+  border: 2px solid var(--primary);
+  box-shadow: 4px 4px 0px 0px var(--primary);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Buttons with Solid Shadows */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--text-dark);
+  box-shadow: 4px 4px 0px 0px var(--text-dark);
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+}
+.btn-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--text-dark);
+}
+.btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px 0px var(--text-dark);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--text-dark);
+  border: 2px solid var(--text-dark);
+  box-shadow: 4px 4px 0px 0px var(--text-dark);
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+}
+.btn-secondary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--text-dark);
+}
+.btn-secondary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px 0px var(--text-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: 4px 4px 0px 0px var(--primary);
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+}
+.btn-outline:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--primary);
+}
+.btn-outline:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px 0px var(--primary);
+}
+
+/* Custom tag cloud text scroll */
+@keyframes scroll-tag {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-scroll-tag {
+  display: flex;
+  width: max-content;
+  animation: scroll-tag 25s linear infinite;
+}
+.animate-scroll-tag:hover {
+  animation-play-state: paused;
+}
+
+/* Embla Carousel styles */
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+.embla__container {
+  display: flex;
+  user-select: none;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding-left: 1rem;
+}
+@media (min-width: 640px) {
+  .embla__slide {
+    flex: 0 0 50%;
   }
 }
