@@ -3,7 +3,6 @@ import ServiceCard from '@/components/shared/ServiceCard';
 import FaqSection from '@/components/shared/FaqSection';
 import { getMetadata } from '@/lib/metadata';
 import { Activity, Brain, MessageSquare, GraduationCap, Users, HeartPulse } from 'lucide-react';
-import Image from 'next/image';
 
 export const metadata = getMetadata({
   title: 'Child Development Therapy in Namakkal | Siragugal Center',
@@ -95,32 +94,18 @@ export default function ChildDevelopmentHub() {
     <div className="bg-bg-light">
       
       {/* Hero Section */}
-      <section className="bg-primary text-white py-12 md:py-16 overflow-hidden">
+      <section className="bg-primary text-white py-8 md:py-12 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left side (60%): Text */}
-            <div className="lg:col-span-7 space-y-4 text-center lg:text-left">
-              <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
-                Child Development Hub
-              </span>
-              <h1 className="text-3xl md:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
-                Child Development Therapy — Unlocking Every Child's Potential
-              </h1>
-              <p className="text-sm sm:text-base md:text-lg text-gray-300 font-semibold max-w-2xl leading-relaxed">
-                Our pediatric department coordinates occupational, speech, behavioral, and psychological therapies under one roof to support children with developmental differences.
-              </p>
-            </div>
-            {/* Right side (40%): Image (Natural Color) */}
-            <div className="lg:col-span-5 relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-white/10 shadow-md">
-              <Image 
-                src="/images/child_occupational_therapy.png" 
-                alt="Child Development Hub" 
-                fill 
-                className="w-full h-full object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 35vw"
-                priority
-              />
-            </div>
+          <div className="max-w-3xl text-center lg:text-left space-y-3">
+            <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
+              Child Development Hub
+            </span>
+            <h1 className="text-3xl md:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
+              Child Development Therapy — Unlocking Every Child's Potential
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 font-semibold leading-relaxed">
+              Our pediatric department coordinates occupational, speech, behavioral, and psychological therapies under one roof to support children with developmental differences.
+            </p>
           </div>
         </div>
       </section>

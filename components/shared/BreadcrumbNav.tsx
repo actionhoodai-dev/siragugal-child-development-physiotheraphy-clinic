@@ -14,22 +14,22 @@ interface BreadcrumbNavProps {
 
 export default function BreadcrumbNav({ items }: BreadcrumbNavProps) {
   return (
-    <nav className="flex items-center text-xs md:text-sm font-semibold text-text-mid mb-6" aria-label="Breadcrumb">
+    <nav className="flex items-center text-xs md:text-sm font-semibold text-white/60 mb-6" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-2">
         <li className="inline-flex items-center">
-          <Link href="/" className="hover:text-primary transition-colors focus:outline-none">
+          <Link href="/" className="hover:text-white transition-colors focus:outline-none">
             Home
           </Link>
         </li>
         {items.map((item, index) => (
           <li key={index} className="flex items-center">
-            <ChevronRight className="h-4 w-4 text-text-mid/40 mx-1" />
+            <ChevronRight className="h-4 w-4 text-white/40 mx-1" />
             {item.href ? (
-              <Link href={item.href} className="hover:text-primary transition-colors focus:outline-none">
+              <Link href={item.href} className="hover:text-white transition-colors focus:outline-none">
                 {item.name}
               </Link>
             ) : (
-              <span className="text-primary font-bold" aria-current="page">
+              <span className="text-secondary font-bold" aria-current="page">
                 {item.name}
               </span>
             )}

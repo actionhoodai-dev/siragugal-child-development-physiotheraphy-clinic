@@ -1,6 +1,5 @@
 import SectionHeading from '@/components/shared/SectionHeading';
 import Link from 'next/link';
-import Image from 'next/image';
 import { getMetadata } from '@/lib/metadata';
 import { 
   Flame, Accessibility, RotateCw, Footprints, 
@@ -30,32 +29,18 @@ export default function PhysiotherapyHub() {
     <div className="bg-bg-light">
       
       {/* Hero Section */}
-      <section className="bg-primary text-white py-12 md:py-16 overflow-hidden">
+      <section className="bg-primary text-white py-8 md:py-12 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left side (60%): Text */}
-            <div className="lg:col-span-7 space-y-4 text-center lg:text-left">
-              <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
-                Physiotherapy Department
-              </span>
-              <h1 className="text-3xl md:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
-                Expert Physiotherapy in Namakkal — Pain Relief, Rehabilitation, and Recovery
-              </h1>
-              <p className="text-sm sm:text-base md:text-lg text-gray-300 font-semibold max-w-2xl leading-relaxed">
-                Our physiotherapy department offers evidence-based treatment for musculoskeletal, neurological, and sports injuries.
-              </p>
-            </div>
-            {/* Right side (40%): Image (Natural Color) */}
-            <div className="lg:col-span-5 relative w-full aspect-[16/10] overflow-hidden rounded-xl border border-white/10 shadow-md">
-              <Image 
-                src="/images/child_pediatric_physiotherapy.png" 
-                alt="Physiotherapy Department" 
-                fill 
-                className="w-full h-full object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 35vw"
-                priority
-              />
-            </div>
+          <div className="max-w-3xl text-center lg:text-left space-y-3">
+            <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
+              Physiotherapy Department
+            </span>
+            <h1 className="text-3xl md:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
+              Expert Physiotherapy in Namakkal — Pain Relief, Rehabilitation, and Recovery
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg text-gray-300 font-semibold leading-relaxed">
+              Our physiotherapy department offers evidence-based treatment for musculoskeletal, neurological, and sports injuries.
+            </p>
           </div>
         </div>
       </section>
