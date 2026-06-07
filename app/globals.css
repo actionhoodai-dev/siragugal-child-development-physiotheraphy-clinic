@@ -75,83 +75,97 @@ html.lenis body {
   pointer-events: none;
 }
 
-/* Custom solid box styles (Surgical precision, bold boundaries) */
-.solid-card {
+/* Modern Soft Cards (Clinical & Premium) */
+.soft-card {
   background-color: var(--white);
-  border: 2px solid var(--text-dark);
-  box-shadow: 4px 4px 0px 0px var(--text-dark);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(26, 26, 46, 0.05);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px -5px rgba(26, 26, 46, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.solid-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px 0px var(--text-dark);
+.soft-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -5px rgba(26, 26, 46, 0.12);
 }
 
-.solid-card-secondary {
+.soft-card-primary {
   background-color: var(--white);
-  border: 2px solid var(--secondary);
-  box-shadow: 4px 4px 0px 0px var(--secondary);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border-top: 4px solid var(--primary);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px -5px rgba(26, 26, 46, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.solid-card-primary {
+.soft-card-primary:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -5px rgba(26, 26, 46, 0.12);
+}
+
+.soft-card-secondary {
   background-color: var(--white);
-  border: 2px solid var(--primary);
-  box-shadow: 4px 4px 0px 0px var(--primary);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border-top: 4px solid var(--secondary);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px -5px rgba(26, 26, 46, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Buttons with Solid Shadows */
+.soft-card-secondary:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -5px rgba(26, 26, 46, 0.12);
+}
+
+/* Rounded Buttons (JSK Clinic Style) */
 .btn-primary {
   background-color: var(--primary);
   color: var(--white);
-  border: 2px solid var(--text-dark);
-  box-shadow: 4px 4px 0px 0px var(--text-dark);
+  border-radius: 9999px; /* Fully rounded pill shape */
   font-weight: 700;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px 0 rgba(27, 42, 138, 0.3);
 }
 .btn-primary:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px 0px var(--text-dark);
+  background-color: #121e6c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(27, 42, 138, 0.4);
 }
 .btn-primary:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px 0px var(--text-dark);
+  transform: translateY(0);
 }
 
 .btn-secondary {
   background-color: var(--secondary);
   color: var(--text-dark);
-  border: 2px solid var(--text-dark);
-  box-shadow: 4px 4px 0px 0px var(--text-dark);
+  border-radius: 9999px;
   font-weight: 700;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px 0 rgba(245, 168, 0, 0.3);
 }
 .btn-secondary:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px 0px var(--text-dark);
+  background-color: #d69300;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(245, 168, 0, 0.4);
 }
 .btn-secondary:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px 0px var(--text-dark);
+  transform: translateY(0);
 }
 
 .btn-outline {
   background-color: transparent;
   color: var(--primary);
   border: 2px solid var(--primary);
-  box-shadow: 4px 4px 0px 0px var(--primary);
+  border-radius: 9999px;
   font-weight: 700;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .btn-outline:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px 0px var(--primary);
+  background-color: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(27, 42, 138, 0.2);
 }
 .btn-outline:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px 0px var(--primary);
+  transform: translateY(0);
 }
 
 /* Custom tag cloud text scroll */

@@ -22,7 +22,7 @@ export default function ConditionCard({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white border-2 border-text-dark shadow-solid overflow-hidden mb-6">
+    <div className="bg-white border border-text-dark/5 shadow-[0_8px_30px_rgba(26,26,46,0.04)] rounded-2xl overflow-hidden mb-6">
       {/* Header Toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -39,7 +39,7 @@ export default function ConditionCard({
             <span>{englishName}</span>
           </h3>
         </div>
-        <div className="p-2 border-2 border-text-dark bg-bg-light shadow-solid hover:-translate-y-0.5 transition-transform flex-shrink-0 ml-4">
+        <div className="p-2.5 bg-bg-light rounded-xl hover:bg-text-dark/5 transition-colors flex-shrink-0 ml-4">
           <ChevronDown className={`h-5 w-5 text-text-dark transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
         </div>
       </button>
@@ -52,7 +52,7 @@ export default function ConditionCard({
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="border-t-2 border-text-dark bg-bg-light"
+            className="border-t border-text-dark/10 bg-bg-light"
           >
             <div className="p-6 space-y-6">
               
@@ -89,7 +89,7 @@ export default function ConditionCard({
                     {therapies.map((therapy, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1.5 bg-primary text-white border border-text-dark text-xs font-bold uppercase tracking-wider"
+                        className="px-3.5 py-1.5 bg-primary/10 text-primary rounded-lg text-xs font-bold uppercase tracking-wider"
                       >
                         {therapy}
                       </span>

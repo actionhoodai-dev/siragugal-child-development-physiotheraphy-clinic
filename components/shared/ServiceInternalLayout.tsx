@@ -32,7 +32,7 @@ export default function ServiceInternalLayout({
         <BreadcrumbNav items={breadcrumbs} />
 
         {/* Hero Section */}
-        <header className="bg-primary text-white border-2 border-text-dark shadow-solid p-6 md:p-10 mb-8 md:mb-12">
+        <header className="bg-primary text-white rounded-2xl shadow-lg p-6 md:p-10 mb-8 md:mb-12 border border-white/5">
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-display font-extrabold mb-4 uppercase tracking-tight leading-tight">
             {title}
           </h1>
@@ -45,7 +45,7 @@ export default function ServiceInternalLayout({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
           
           {/* Main Article Content */}
-          <div className="lg:col-span-2 space-y-10 bg-white border-2 border-text-dark p-6 md:p-10 shadow-solid">
+          <div className="lg:col-span-2 space-y-10 bg-white border border-text-dark/5 p-6 md:p-10 rounded-2xl shadow-[0_8px_30px_rgba(26,26,46,0.04)]">
             {children}
           </div>
 
@@ -53,7 +53,7 @@ export default function ServiceInternalLayout({
           <aside className="space-y-6 md:space-y-8">
             
             {/* Quick Contact Card */}
-            <div className="bg-bg-dark text-white border-2 border-text-dark shadow-solid p-6 md:p-8">
+            <div className="bg-bg-dark text-white border border-white/5 rounded-2xl shadow-lg p-6 md:p-8">
               <h3 className="text-lg font-display font-extrabold text-secondary mb-3 uppercase tracking-wider">
                 Siragugal Rehab
               </h3>
@@ -81,7 +81,7 @@ export default function ServiceInternalLayout({
             </div>
 
             {/* Visiting Hours Card */}
-            <div className="bg-white border-2 border-text-dark shadow-solid p-6">
+            <div className="bg-white border border-text-dark/5 rounded-2xl shadow-[0_8px_30px_rgba(26,26,46,0.04)] p-6">
               <h4 className="text-xs font-bold text-text-dark uppercase tracking-wider mb-2">
                 Visiting Hours
               </h4>
@@ -92,7 +92,7 @@ export default function ServiceInternalLayout({
             </div>
 
             {/* Early Intervention Card */}
-            <div className="bg-secondary/10 border-2 border-secondary p-6 text-text-dark">
+            <div className="bg-secondary/10 border border-secondary/20 rounded-2xl p-6 text-text-dark">
               <h4 className="text-xs font-bold text-primary uppercase tracking-wider mb-2">
                 Why Early Intervention?
               </h4>
@@ -106,7 +106,7 @@ export default function ServiceInternalLayout({
         </div>
 
         {/* Bottom CTA Banner */}
-        <section className="mt-12 md:mt-16 bg-secondary text-text-dark border-2 border-text-dark shadow-solid-primary p-6 md:p-10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <section className="mt-12 md:mt-16 bg-secondary text-text-dark rounded-2xl p-6 md:p-10 flex flex-col md:flex-row justify-between items-center gap-6 shadow-lg">
           <div className="space-y-1 text-center md:text-left max-w-2xl">
             <h3 className="text-xl md:text-2xl font-display font-extrabold uppercase tracking-tight">
               Ready to start your recovery?

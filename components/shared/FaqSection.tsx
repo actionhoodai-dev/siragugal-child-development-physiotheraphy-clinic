@@ -27,7 +27,7 @@ export default function FaqSection({ faqs }: FaqSectionProps) {
         return (
           <div 
             key={index}
-            className="bg-white border-2 border-text-dark shadow-solid overflow-hidden transition-all duration-200"
+            className="bg-white border border-text-dark/5 shadow-[0_4px_20px_rgba(26,26,46,0.02)] rounded-xl overflow-hidden transition-all duration-200"
           >
             {/* Question Bar */}
             <button
@@ -38,7 +38,7 @@ export default function FaqSection({ faqs }: FaqSectionProps) {
               <span className="font-display font-extrabold text-sm md:text-base text-primary pr-4">
                 {faq.question}
               </span>
-              <div className="p-1 border border-text-dark bg-bg-light flex-shrink-0">
+              <div className="p-1.5 bg-bg-light rounded-lg flex-shrink-0 hover:bg-text-dark/5 transition-colors">
                 <ChevronDown className={`h-4 w-4 text-text-dark transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
               </div>
             </button>

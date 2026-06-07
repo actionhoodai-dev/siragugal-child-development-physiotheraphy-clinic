@@ -15,11 +15,11 @@ export default function ServiceCard({ name, description, iconName, href }: Servi
   const Icon = (Icons as any)[iconName] || Icons.HelpCircle;
   return (
     <motion.div
-      whileHover={{ y: -8, x: -4 }}
-      className="bg-white border-2 border-text-dark p-6 md:p-8 flex flex-col justify-between h-full hover:shadow-[8px_8px_0px_0px_rgba(26,26,46,1)] shadow-[4px_4px_0px_0px_rgba(26,26,46,1)] transition-shadow duration-200"
+      whileHover={{ y: -6 }}
+      className="bg-white border border-text-dark/5 p-6 md:p-8 flex flex-col justify-between h-full rounded-2xl shadow-[0_8px_30px_rgba(26,26,46,0.04)] hover:shadow-[0_20px_40px_rgba(26,26,46,0.08)] transition-all duration-300"
     >
       <div>
-        <div className="inline-flex items-center justify-center p-3 bg-secondary text-text-dark border-2 border-text-dark mb-6">
+        <div className="inline-flex items-center justify-center p-3.5 bg-secondary/15 text-primary rounded-xl mb-6">
           <Icon className="h-6 w-6" />
         </div>
         <h3 className="text-xl md:text-2xl font-display font-extrabold text-primary mb-3">
