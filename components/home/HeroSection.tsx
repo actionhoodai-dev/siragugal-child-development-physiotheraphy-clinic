@@ -2,11 +2,19 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Phone, Mail, Sparkles, Brain, Shield, Heart, Activity } from 'lucide-react';
 import { animateHeroText } from '@/lib/animations';
 
 export default function HeroSection() {
+  const { scrollY } = useScroll();
+  const bgY = useTransform(scrollY, [0, 800], [0, 150]);
+  const icon1Y = useTransform(scrollY, [0, 600], [0, -60]);
+  const icon2Y = useTransform(scrollY, [0, 600], [0, 40]);
+  const icon3Y = useTransform(scrollY, [0, 600], [0, -35]);
+  const icon4Y = useTransform(scrollY, [0, 600], [0, 50]);
+
   useEffect(() => {
     animateHeroText('.hero-title-container');
   }, []);
@@ -18,9 +26,12 @@ export default function HeroSection() {
     <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-bg-dark text-white overflow-hidden py-12 md:py-20">
       
       {/* Sliced Teal Background Accent (JSK Reference Style) */}
-      <div 
+      <motion.div 
         className="absolute top-0 right-0 h-full w-[45%] bg-accent pointer-events-none hidden lg:block opacity-85 z-0"
-        style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)' }}
+        style={{ 
+          clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)',
+          y: bgY
+        }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 w-full z-10">
@@ -40,9 +51,12 @@ export default function HeroSection() {
                 className="absolute inset-0 border border-text-dark/5 shadow-2xl overflow-hidden transition-all duration-300"
                 style={{ borderRadius: '2rem' }}
               >
-                <img 
+                <Image 
                   src="/images/child_therapy_hero.png" 
                   alt="Child Development Therapy Session at Siragugal" 
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                   className="w-full h-full object-cover" 
                 />
                 {/* Visual Overlay for branding */}
@@ -56,41 +70,49 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Floating Therapy Icons (Soft Shadow & Rounded) */}
-              {/* Icon 1: Speech */}
-              <motion.div
-                animate={{ rotate: [0, 2, 0] }}
-                transition={{ repeat: Infinity, duration: 2.5, ease: 'easeInOut' }}
-                className="absolute -top-4 -left-4 p-4 bg-white border border-text-dark/5 shadow-lg rounded-2xl text-secondary flex items-center justify-center"
-              >
-                <Heart className="h-6 w-6 fill-secondary text-secondary" />
+              {/* Floating Therapy Icons (Soft Shadow & Rounded with multi-axis dynamic float) */}
+              {/* Icon 1: Heart (Speech/Love) */}
+              <motion.div style={{ y: icon1Y }} className="absolute -top-4 -left-4 z-20">
+                <motion.div
+                  animate={{ y: [0, -12, 0], x: [0, 6, 0], rotate: [0, 6, -6, 0] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+                  className="p-4 bg-white border border-text-dark/5 shadow-lg rounded-2xl text-secondary flex items-center justify-center"
+                >
+                  <Heart className="h-6 w-6 fill-secondary text-secondary" />
+                </motion.div>
               </motion.div>
 
               {/* Icon 2: Occupational */}
-              <motion.div
-                animate={{ rotate: [0, -3, 0] }}
-                transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-                className="absolute -bottom-4 left-6 p-4 bg-accent border border-white/5 shadow-lg rounded-2xl text-white flex items-center justify-center"
-              >
-                <Activity className="h-6 w-6" />
+              <motion.div style={{ y: icon2Y }} className="absolute -bottom-4 left-6 z-20">
+                <motion.div
+                  animate={{ y: [0, 10, 0], x: [0, -8, 0], rotate: [0, -4, 4, 0] }}
+                  transition={{ repeat: Infinity, duration: 4.5, ease: 'easeInOut' }}
+                  className="p-4 bg-accent border border-white/5 shadow-lg rounded-2xl text-white flex items-center justify-center"
+                >
+                  <Activity className="h-6 w-6" />
+                </motion.div>
               </motion.div>
 
               {/* Icon 3: Brain/Behavioral */}
-              <motion.div
-                animate={{ rotate: [0, 4, 0] }}
-                transition={{ repeat: Infinity, duration: 3.5, ease: 'easeInOut' }}
-                className="absolute top-12 -right-4 p-4 bg-secondary border border-text-dark/5 shadow-lg rounded-2xl text-text-dark flex items-center justify-center"
-              >
-                <Brain className="h-6 w-6 text-text-dark" />
+              <motion.div style={{ y: icon3Y }} className="absolute top-12 -right-4 z-20">
+                <motion.div
+                  animate={{ y: [0, -8, 0], x: [0, -6, 0], rotate: [0, 5, -5, 0] }}
+                  transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
+                  className="p-4 bg-secondary border border-text-dark/5 shadow-lg rounded-2xl text-text-dark flex items-center justify-center"
+                >
+                  <Brain className="h-6 w-6 text-text-dark" />
+                </motion.div>
               </motion.div>
 
               {/* Icon 4: Shield */}
-              <motion.div
-                animate={{ rotate: [0, -2, 0] }}
-                transition={{ repeat: Infinity, duration: 2.8, ease: 'easeInOut' }}
-                className="absolute -bottom-6 right-10 p-4 bg-white border border-text-dark/5 shadow-lg rounded-2xl text-primary flex items-center justify-center"
-              >
-                <Shield className="h-6 w-6 text-primary" />
+              <motion.div style={{ y: icon4Y }} className="absolute -bottom-6 right-10 z-20">
+                <motion.div
+                  animate={{ y: [0, 12, 0], x: [0, 8, 0], rotate: [0, -8, 8, 0] }}
+                  transition={{ repeat: Infinity, duration: 3.8, ease: 'easeInOut' }}
+                  className="p-4 bg-white border border-text-dark/5 shadow-lg rounded-2xl text-primary flex items-center justify-center"
+                >
+                  <Shield className="h-6 w-6 text-primary" />
+                </motion.div>
               </motion.div>
 
             </motion.div>
@@ -111,8 +133,8 @@ export default function HeroSection() {
             {/* Headline */}
             <h1 className="hero-title-container text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-white leading-tight tracking-tight">
               {words.map((word, i) => (
-                <span key={i} className="inline-block overflow-hidden mr-3">
-                  <span className="word-reveal inline-block" style={{ opacity: 0 }}>
+                <span key={i} className="inline-block overflow-hidden mr-3 pb-4 -mb-4 align-bottom">
+                  <span className="word-reveal inline-block align-bottom pb-1.5" style={{ opacity: 0 }}>
                     {word}
                   </span>
                 </span>

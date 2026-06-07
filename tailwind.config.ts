@@ -21,8 +21,8 @@ const config: Config = {
         success: "#28A745",
       },
       fontFamily: {
-        display: ["var(--font-sora)", "sans-serif"],
-        body: ["var(--font-nunito)", "sans-serif"],
+        display: ["var(--font-plus-jakarta-sans)", "sans-serif"],
+        body: ["var(--font-inter)", "sans-serif"],
         tamil: ["var(--font-noto-tamil)", "sans-serif"],
       },
       boxShadow: {

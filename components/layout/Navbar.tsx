@@ -17,6 +17,34 @@ const childDevServices = [
   { name: 'Counseling Psychology', href: '/child-development/counseling-psychology', icon: Users, desc: 'Assessments & family support' },
 ];
 
+export const WingsLogo = () => (
+  <svg className="h-8 w-8 text-primary flex-shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path 
+      d="M16 26C16 26 10 20 6 15C2.5 10.5 3 6 7 6C11 6 14.5 10.5 16 13C17.5 10.5 21 6 25 6C29 6 29.5 10.5 26 15C22 20 16 26 16 26Z" 
+      fill="url(#logo-gradient)" 
+    />
+    <path 
+      d="M16 14C16 14 14.5 11 11 11C8.5 11 8.5 13.5 11 15.5C13.5 17.5 16 21 16 21" 
+      stroke="white" 
+      strokeWidth="1.5" 
+      strokeLinecap="round" 
+    />
+    <path 
+      d="M16 14C16 14 17.5 11 21 11C23.5 11 23.5 13.5 21 15.5C18.5 17.5 16 21 16 21" 
+      stroke="white" 
+      strokeWidth="1.5" 
+      strokeLinecap="round" 
+    />
+    <defs>
+      <linearGradient id="logo-gradient" x1="4" y1="6" x2="28" y2="26" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#1B2A8A" />
+        <stop offset="0.5" stopColor="#00AACC" />
+        <stop offset="1" stopColor="#F5A800" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -79,13 +107,16 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20 md:h-24">
           
           {/* Logo */}
-          <Link href="/" className="flex flex-col flex-shrink-0 focus:outline-none" aria-label="Siragugal Home">
-            <span className="font-display text-2xl md:text-3xl font-extrabold text-primary tracking-tight leading-none">
-              Siragugal
-            </span>
-            <span className="text-[10px] md:text-xs font-semibold text-text-mid uppercase tracking-wider mt-1">
-              Child Development & Physiotherapy Center
-            </span>
+          <Link href="/" className="flex items-center space-x-2.5 flex-shrink-0 focus:outline-none" aria-label="Siragugal Home">
+            <WingsLogo />
+            <div className="flex flex-col">
+              <span className="font-display text-xl md:text-2xl font-extrabold text-primary tracking-tight leading-none">
+                Siragugal<span className="text-secondary font-black">.</span>
+              </span>
+              <span className="text-[9px] font-semibold text-text-mid uppercase tracking-wider mt-1 hidden lg:block">
+                Child Development & Physiotherapy Center
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav Links */}

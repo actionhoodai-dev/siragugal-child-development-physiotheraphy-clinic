@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
+import { WingsLogo } from './Navbar';
 
 export default function Footer() {
   return (
@@ -11,13 +12,16 @@ export default function Footer() {
           
           {/* Column 1: Clinic Brand & Address */}
           <div className="space-y-4">
-            <div>
-              <span className="font-display text-2xl font-extrabold text-white tracking-tight leading-none block">
-                Siragugal
-              </span>
-              <span className="text-[10px] font-semibold text-accent uppercase tracking-wider mt-1 block">
-                Child Development & Physiotherapy Center
-              </span>
+            <div className="flex items-center space-x-2.5">
+              <WingsLogo />
+              <div className="flex flex-col">
+                <span className="font-display text-xl font-extrabold text-white tracking-tight leading-none">
+                  Siragugal<span className="text-secondary font-black">.</span>
+                </span>
+                <span className="text-[9px] font-semibold text-accent uppercase tracking-wider mt-0.5">
+                  Child Development & Physiotherapy Center
+                </span>
+              </div>
             </div>
             <p className="text-secondary font-semibold tamil-text text-sm leading-relaxed">
               இவைகளுக்கு சிறப்பான சிகிச்சை அளிக்கப்படும்.

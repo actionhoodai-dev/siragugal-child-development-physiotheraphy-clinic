@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import * as Icons from 'lucide-react';
 
@@ -22,13 +23,15 @@ export default function ServiceCard({ name, description, iconName, href, imageUr
       <div>
         {imageUrl && (
           <div className="h-48 w-full overflow-hidden relative border-b border-text-dark/5">
-            <img 
+            <Image 
               src={imageUrl} 
               alt={name} 
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
             />
             {/* Float icon overlay */}
-            <div className="absolute bottom-3 right-3 p-2.5 bg-white/95 text-primary rounded-xl shadow-md flex items-center justify-center">
+            <div className="absolute bottom-3 right-3 p-2.5 bg-white/95 text-primary rounded-xl shadow-md flex items-center justify-center z-10">
               <Icon className="h-4 w-4" />
             </div>
           </div>
