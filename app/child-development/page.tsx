@@ -88,7 +88,7 @@ export default function ChildDevelopmentHub() {
     <div className="bg-bg-light">
       
       {/* Hero Section */}
-      <section className="bg-primary text-white border-b-4 border-text-dark py-16 md:py-24">
+      <section className="bg-primary text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center lg:text-left">
           <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
             Child Development Hub
@@ -103,7 +103,7 @@ export default function ChildDevelopmentHub() {
       </section>
 
       {/* Services Grid Section */}
-      <section className="py-16 md:py-20 bg-white border-b-4 border-text-dark">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
           <SectionHeading 
             title="Specialized Pediatric Services" 
@@ -124,7 +124,7 @@ export default function ChildDevelopmentHub() {
       </section>
 
       {/* Conditions Section */}
-      <section className="py-16 md:py-20 bg-bg-light border-b-4 border-text-dark">
+      <section className="py-16 md:py-20 bg-bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
           <SectionHeading 
             title="Conditions We Treat" 
@@ -135,7 +135,7 @@ export default function ChildDevelopmentHub() {
             {conditions.map((cond, index) => (
               <div 
                 key={index} 
-                className="bg-white border-2 border-text-dark p-6 shadow-solid flex items-center space-x-3"
+                className="bg-white border border-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-center space-x-3"
               >
                 <div className="w-1.5 h-10 bg-secondary flex-shrink-0" />
                 <div>

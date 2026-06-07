@@ -15,7 +15,7 @@ export default function HeroSection() {
   const words = headline.split(' ');
 
   return (
-    <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-bg-dark text-white overflow-hidden py-12 md:py-20 border-b-4 border-text-dark">
+    <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-bg-dark text-white overflow-hidden py-12 md:py-20">
       
       {/* Sliced Teal Background Accent (JSK Reference Style) */}
       <div 
@@ -57,13 +57,13 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Link 
                 href="/contact" 
-                className="btn-secondary px-8 py-4 rounded-full text-center uppercase tracking-wider text-sm font-extrabold"
+                className="btn btn-secondary text-center"
               >
                 Book Free Consultation
               </Link>
               <Link 
                 href="/child-development" 
-                className="btn-outline px-8 py-4 rounded-full text-center uppercase tracking-wider text-sm font-extrabold border-white text-white hover:bg-white hover:text-bg-dark transition-all duration-200"
+                className="btn btn-outline border-white text-white hover:bg-white hover:text-bg-dark text-center"
               >
                 Explore Services
               </Link>

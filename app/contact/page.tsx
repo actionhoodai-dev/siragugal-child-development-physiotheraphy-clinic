@@ -115,7 +115,7 @@ export default function ContactPage() {
     <div className="bg-bg-light">
       
       {/* Header */}
-      <section className="bg-primary text-white border-b-4 border-text-dark py-16 md:py-24">
+      <section className="bg-primary text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center lg:text-left">
           <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
             Get In Touch
@@ -130,12 +130,12 @@ export default function ContactPage() {
       </section>
 
       {/* Main Grid */}
-      <section className="py-16 bg-white border-b-4 border-text-dark">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
             {/* Left 60% - Contact Form */}
-            <div className="lg:col-span-7 bg-bg-light border-2 border-text-dark p-6 md:p-10 shadow-solid">
+            <div className="lg:col-span-7 bg-bg-light border border-gray-200/50 p-6 md:p-10 rounded-2xl shadow-md">
               
               <h2 className="text-2xl font-display font-extrabold text-primary mb-6 uppercase tracking-tight">
                 Request an Evaluation
@@ -176,7 +176,7 @@ export default function ContactPage() {
                       id="fullName"
                       type="text"
                       {...register('fullName')}
-                      className={`w-full p-3 border-2 border-text-dark font-medium text-sm focus:outline-none focus:border-primary ${
+                      className={`w-full p-3 border border-gray-300 rounded-lg font-medium text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${
                         errors.fullName ? 'border-red-500 bg-red-50' : 'bg-white'
                       }`}
                       placeholder="Enter parent or patient name"
@@ -195,7 +195,7 @@ export default function ContactPage() {
                       id="phone"
                       type="tel"
                       {...register('phone')}
-                      className={`w-full p-3 border-2 border-text-dark font-medium text-sm focus:outline-none focus:border-primary ${
+                      className={`w-full p-3 border border-gray-300 rounded-lg font-medium text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${
                         errors.phone ? 'border-red-500 bg-red-50' : 'bg-white'
                       }`}
                       placeholder="e.g. 7338833962"
@@ -214,7 +214,7 @@ export default function ContactPage() {
                       id="email"
                       type="email"
                       {...register('email')}
-                      className="w-full p-3 border-2 border-text-dark bg-white font-medium text-sm focus:outline-none focus:border-primary"
+                      className="w-full p-3 border border-gray-300 rounded-lg bg-white font-medium text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
                       placeholder="e.g. email@example.com"
                     />
                     {errors.email && (
@@ -230,8 +230,8 @@ export default function ContactPage() {
                     <select
                       id="childAge"
                       {...register('childAge')}
-                      className={`w-full p-3 border-2 border-text-dark font-bold text-sm bg-white focus:outline-none focus:border-primary ${
-                        errors.childAge ? 'border-red-500' : ''
+                      className={`w-full p-3 border border-gray-300 rounded-lg font-bold text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${
+                        errors.childAge ? 'border-red-500 bg-red-50' : ''
                       }`}
                     >
                       <option value="">-- Select Age Bracket --</option>
@@ -259,14 +259,14 @@ export default function ContactPage() {
                             key={service}
                             type="button"
                             onClick={() => handleCheckboxChange(service)}
-                            className={`flex items-center p-3 border-2 text-left text-xs md:text-sm font-bold uppercase transition-all duration-150 ${
+                            className={`flex items-center p-3 border rounded-lg text-left text-xs md:text-sm font-bold uppercase transition-all duration-150 ${
                               isChecked 
-                                ? 'bg-primary text-white border-text-dark' 
-                                : 'bg-white text-text-dark border-text-dark hover:bg-bg-light'
+                                ? 'bg-primary text-white border-primary shadow-sm' 
+                                : 'bg-white text-text-dark border-gray-200 hover:bg-bg-light hover:border-gray-300'
                             }`}
                           >
-                            <span className={`w-4 h-4 border border-text-dark mr-3 flex items-center justify-center ${
-                              isChecked ? 'bg-secondary' : 'bg-white'
+                            <span className={`w-4 h-4 border border-gray-300 rounded mr-3 flex items-center justify-center ${
+                              isChecked ? 'bg-secondary border-secondary' : 'bg-white'
                             }`}>
                               {isChecked && <span className="w-2 h-2 bg-text-dark" />}
                             </span>
@@ -289,7 +289,7 @@ export default function ContactPage() {
                       id="description"
                       rows={4}
                       {...register('description')}
-                      className={`w-full p-3 border-2 border-text-dark font-medium text-sm focus:outline-none focus:border-primary ${
+                      className={`w-full p-3 border border-gray-300 rounded-lg font-medium text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${
                         errors.description ? 'border-red-500 bg-red-50' : 'bg-white'
                       }`}
                       placeholder="Please outline the issues or delays you would like addressed"
@@ -303,7 +303,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-secondary w-full py-4 rounded uppercase text-sm font-extrabold tracking-widest flex items-center justify-center focus:outline-none disabled:opacity-50"
+                    className="btn btn-secondary w-full py-4 uppercase text-sm font-extrabold tracking-widest flex items-center justify-center focus:outline-none disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <>
@@ -327,7 +327,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 
                 {/* MapPin */}
-                <div className="bg-white border-2 border-text-dark p-5 shadow-solid flex items-start gap-4">
+                <div className="bg-white border border-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary">
@@ -342,7 +342,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Telephone */}
-                <div className="bg-white border-2 border-text-dark p-5 shadow-solid flex items-start gap-4">
+                <div className="bg-white border border-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4">
                   <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary">
@@ -359,7 +359,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Mail */}
-                <div className="bg-white border-2 border-text-dark p-5 shadow-solid flex items-start gap-4">
+                <div className="bg-white border border-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4">
                   <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary">
@@ -376,7 +376,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Hours */}
-                <div className="bg-white border-2 border-text-dark p-5 shadow-solid flex items-start gap-4">
+                <div className="bg-white border border-gray-100 p-5 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4">
                   <Clock className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary">
@@ -393,7 +393,7 @@ export default function ContactPage() {
                   href="https://wa.me/917338833962"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center btn-primary py-3 rounded text-sm uppercase tracking-wider w-full text-center"
+                  className="flex items-center justify-center btn btn-primary py-3 text-sm uppercase tracking-wider w-full text-center"
                   aria-label="Chat on WhatsApp"
                 >
                   <MessageCircle className="h-5 w-5 mr-2" />
@@ -403,7 +403,7 @@ export default function ContactPage() {
               </div>
 
               {/* Embedded Map */}
-              <div className="border-2 border-text-dark shadow-solid w-full h-64 md:h-72">
+              <div className="border border-gray-100 rounded-xl overflow-hidden shadow-md w-full h-64 md:h-72">
                 <iframe
                   title="Siragugal Clinic Location Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.869032688005!2d78.165411!3d11.218900000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab070000000001%3A0x0!2zMTHCsDEzJzA4LjAiTiA3OMKwMDknNTUuNSJFOA!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"

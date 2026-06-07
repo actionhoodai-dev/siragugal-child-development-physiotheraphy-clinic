@@ -12,7 +12,7 @@ export default function PrivacyPage() {
     <article className="min-h-screen bg-bg-light py-12 md:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
-        <div className="bg-white border-2 border-text-dark p-8 md:p-12 shadow-solid-primary space-y-6">
+        <div className="bg-white border border-gray-100 p-8 md:p-12 rounded-2xl shadow-lg space-y-6">
           <SectionHeading 
             title="Privacy Policy" 
             subtitle="PATIENT DATA SECURITY AND COMPLIANCE" 

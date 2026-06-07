@@ -36,7 +36,7 @@ export default function AboutPage() {
     <div className="bg-bg-light">
       
       {/* Page Header */}
-      <section className="bg-primary text-white border-b-4 border-text-dark py-16 md:py-24">
+      <section className="bg-primary text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center lg:text-left">
           <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
             Who We Are
@@ -48,7 +48,7 @@ export default function AboutPage() {
       </section>
 
       {/* Section 1: Who We Are */}
-      <section className="py-16 md:py-20 bg-white border-b-4 border-text-dark">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-8 space-y-6">
@@ -62,7 +62,7 @@ export default function AboutPage() {
                 Located in the heart of Namakkal, we bridge the gap between families who need specialized support and the world-class therapies that can transform a child's life. We specialize in bringing modern, evidence-based therapy protocols to the local community, eliminating the need to travel to metro cities for elite rehabilitation.
               </p>
             </div>
-            <div className="lg:col-span-4 bg-secondary border-2 border-text-dark p-8 shadow-solid-primary">
+            <div className="lg:col-span-4 bg-secondary rounded-2xl p-8 shadow-md">
               <h3 className="font-display font-extrabold text-xl text-text-dark uppercase tracking-tight mb-3">
                 Our Mission
               </h3>
@@ -75,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       {/* Section 2: The Science Behind Our Care */}
-      <section className="py-16 md:py-20 bg-bg-dark text-white border-b-4 border-text-dark">
+      <section className="py-16 md:py-20 bg-bg-dark text-white border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
           <SectionHeading 
             title="The Science Behind Our Care" 
@@ -120,7 +120,7 @@ export default function AboutPage() {
       </section>
 
       {/* Section 3: Our Approach */}
-      <section className="py-16 md:py-20 bg-white border-b-4 border-text-dark">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
           <SectionHeading 
             title="Our Clinical Approach" 
@@ -131,7 +131,7 @@ export default function AboutPage() {
             {principles.map((pr, index) => (
               <div 
                 key={index}
-                className={`p-6 border-2 border-text-dark shadow-solid-primary flex flex-col justify-between ${pr.color}`}
+                className={`p-6 border border-text-dark/5 rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between ${pr.color.replace('border-primary', 'border-primary/25').replace('border-secondary', 'border-secondary/25').replace('border-accent', 'border-accent/25').replace('border-bg-dark', 'border-bg-dark/25')}`}
               >
                 <div>
                   <h3 className="text-lg font-display font-extrabold uppercase tracking-wider mb-4 border-b border-white/20 pb-2">
@@ -161,7 +161,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 space-y-6">
               
               {/* Address card */}
-              <div className="bg-white border-2 border-text-dark p-6 shadow-solid flex items-start gap-4">
+              <div className="bg-white border border-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4">
                 <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary mb-1">
@@ -177,7 +177,7 @@ export default function AboutPage() {
               </div>
 
               {/* Hours card */}
-              <div className="bg-white border-2 border-text-dark p-6 shadow-solid flex items-start gap-4">
+              <div className="bg-white border border-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4">
                 <Clock className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary mb-1">
@@ -191,7 +191,7 @@ export default function AboutPage() {
               </div>
 
               {/* Landmark card */}
-              <div className="bg-white border-2 border-text-dark p-6 shadow-solid flex items-start gap-4">
+              <div className="bg-white border border-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4">
                 <Compass className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary mb-1">
@@ -206,7 +206,7 @@ export default function AboutPage() {
             </div>
 
             {/* Map Column */}
-            <div className="lg:col-span-7 border-2 border-text-dark shadow-solid w-full h-80 md:h-[400px]">
+            <div className="lg:col-span-7 border border-gray-100 rounded-xl overflow-hidden shadow-md w-full h-80 md:h-[400px]">
               <iframe
                 title="Siragugal Clinic Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.869032688005!2d78.165411!3d11.218900000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab070000000001%3A0x0!2zMTHCsDEzJzA4LjAiTiA3OMKwMDknNTUuNSJFOA!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"

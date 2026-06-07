@@ -24,6 +24,7 @@ export default function SectionHeading({ title, subtitle, light = false }: Secti
       >
         {title}
       </h2>
+      <div className={`h-1 w-16 rounded mt-3 mb-2 ${light ? 'bg-secondary' : 'bg-primary'}`} />
       {subtitle && (
         <p className={`text-base md:text-lg font-semibold ${
           light ? 'text-secondary' : 'text-accent'

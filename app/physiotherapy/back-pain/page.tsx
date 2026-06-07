@@ -68,7 +68,7 @@ export default function BackPainPage() {
       </section>
 
       {/* Home Exercises (SEO Gold) */}
-      <section className="space-y-4 bg-bg-light p-6 border-2 border-text-dark">
+      <section className="space-y-4 bg-bg-light p-6 border border-gray-200/60 rounded-xl shadow-sm">
         <h2 className="text-lg md:text-xl font-display font-extrabold text-primary">
           Home Exercises & Care Tips
         </h2>

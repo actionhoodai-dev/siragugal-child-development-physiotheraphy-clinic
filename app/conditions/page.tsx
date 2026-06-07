@@ -108,7 +108,7 @@ export default function ConditionsPage() {
     <div className="bg-bg-light">
       
       {/* Header */}
-      <section className="bg-primary text-white border-b-4 border-text-dark py-16 md:py-24">
+      <section className="bg-primary text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center lg:text-left">
           <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
             Clinical Scope
@@ -123,7 +123,7 @@ export default function ConditionsPage() {
       </section>
 
       {/* Accordion list */}
-      <section className="py-16 bg-white border-b-4 border-text-dark">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <SectionHeading 
             title="Condition Profiles" 
@@ -148,7 +148,7 @@ export default function ConditionsPage() {
       {/* SEO Article Section */}
       <section className="py-16 md:py-20 bg-bg-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-white border-2 border-text-dark p-8 md:p-12 shadow-solid-primary space-y-6">
+          <div className="bg-white border border-gray-100 p-8 md:p-12 rounded-2xl shadow-lg space-y-6">
             
             <h2 className="text-2xl md:text-3xl font-display font-extrabold text-primary border-b-2 border-secondary pb-3 uppercase tracking-tight">
               Parent's Guide: Understanding Developmental Disorders
@@ -195,7 +195,7 @@ export default function ConditionsPage() {
             <div className="pt-6 border-t border-text-dark/10 text-center">
               <Link 
                 href="/contact" 
-                className="btn-secondary px-8 py-3.5 inline-block uppercase text-xs md:text-sm tracking-wider font-extrabold"
+                className="btn btn-secondary px-8 py-3.5 inline-block uppercase text-xs md:text-sm tracking-wider font-extrabold"
               >
                 Request a Free Screening Call
               </Link>

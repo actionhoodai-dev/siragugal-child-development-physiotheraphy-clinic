@@ -71,7 +71,7 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white border-b-2 border-text-dark shadow-solid' 
+        ? 'bg-white border-b border-gray-100 shadow-md' 
         : 'bg-white/95 md:bg-transparent'
     }`}>
       {/* Scroll indicator hook */}
@@ -125,7 +125,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 15 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-0 mt-3 w-80 bg-white border-2 border-text-dark shadow-solid p-4 z-50"
+                    className="absolute left-0 mt-3 w-80 bg-white border border-gray-100 rounded-xl shadow-lg p-4 z-50"
                     onMouseLeave={() => setDropdownOpen(false)}
                   >
                     <div className="grid gap-2">
@@ -176,19 +176,19 @@ export default function Navbar() {
             </Link>
 
             {/* Book Appointment CTA */}
-            <Link href="/contact" className="btn-secondary px-6 py-2.5 rounded text-sm uppercase tracking-wider">
+            <Link href="/contact" className="btn btn-secondary text-xs uppercase tracking-wider px-5 py-2.5">
               Book Appointment
             </Link>
           </div>
 
           {/* Mobile Menu Hamburger */}
           <div className="flex md:hidden items-center space-x-2">
-            <Link href="/contact" className="btn-secondary px-3 py-1.5 rounded text-xs uppercase font-bold">
+            <Link href="/contact" className="btn btn-secondary px-3 py-1.5 text-xs uppercase font-bold">
               Book
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-text-dark border-2 border-text-dark bg-white shadow-solid focus:outline-none"
+              className="p-2 text-text-dark border border-gray-200 rounded-lg bg-white shadow-sm focus:outline-none"
               aria-expanded={isOpen}
               aria-label="Toggle Navigation Menu"
             >
@@ -207,7 +207,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden w-full bg-white border-b-2 border-text-dark overflow-y-auto"
+            className="md:hidden w-full bg-white border-b border-gray-100 shadow-md overflow-y-auto"
           >
             <div className="px-4 pt-4 pb-6 space-y-4 max-h-[80vh] overflow-y-auto">
               <Link 
@@ -276,7 +276,7 @@ export default function Navbar() {
                   href="https://wa.me/917338833962"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center btn-primary w-full py-3 rounded text-sm uppercase tracking-wider"
+                  className="flex items-center justify-center btn btn-primary w-full py-3 text-sm uppercase tracking-wider"
                   aria-label="Chat on WhatsApp"
                 >
                   <MessageCircle className="h-5 w-5 mr-2" />

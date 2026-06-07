@@ -116,18 +116,34 @@ html.lenis body {
 }
 
 /* Rounded Buttons (JSK Clinic Style) */
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 0.5rem; /* 8px rounded */
+  justify-content: center;
+  align-items: center;
+  padding: 0.875rem 1.75rem;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+}
+
 .btn-primary {
   background-color: var(--primary);
   color: var(--white);
-  border-radius: 9999px; /* Fully rounded pill shape */
+  border-radius: 0.5rem;
   font-weight: 700;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px 0 rgba(27, 42, 138, 0.3);
+  box-shadow: 0 4px 10px 0 rgba(27, 42, 138, 0.2);
 }
 .btn-primary:hover {
   background-color: #121e6c;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(27, 42, 138, 0.4);
+  box-shadow: 0 6px 15px 0 rgba(27, 42, 138, 0.3);
 }
 .btn-primary:active {
   transform: translateY(0);
@@ -136,15 +152,15 @@ html.lenis body {
 .btn-secondary {
   background-color: var(--secondary);
   color: var(--text-dark);
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   font-weight: 700;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px 0 rgba(245, 168, 0, 0.3);
+  box-shadow: 0 4px 10px 0 rgba(245, 168, 0, 0.25);
 }
 .btn-secondary:hover {
   background-color: #d69300;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(245, 168, 0, 0.4);
+  box-shadow: 0 6px 15px 0 rgba(245, 168, 0, 0.35);
 }
 .btn-secondary:active {
   transform: translateY(0);
@@ -154,7 +170,7 @@ html.lenis body {
   background-color: transparent;
   color: var(--primary);
   border: 2px solid var(--primary);
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   font-weight: 700;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -162,10 +178,43 @@ html.lenis body {
   background-color: var(--primary);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px 0 rgba(27, 42, 138, 0.2);
+  box-shadow: 0 6px 15px 0 rgba(27, 42, 138, 0.15);
 }
 .btn-outline:active {
   transform: translateY(0);
+}
+
+/* Pulsing WhatsApp Widget Styles */
+.whatsapp-widget-btn {
+  color: #ffffff;
+  z-index: 999;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #25d366;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  animation: 2s infinite whatsapp-pulse;
+  display: flex;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.whatsapp-widget-btn:hover {
+  background-color: #128c7e;
+  transform: scale(1.08) translateY(-2px);
+}
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }
 
 /* Custom tag cloud text scroll */

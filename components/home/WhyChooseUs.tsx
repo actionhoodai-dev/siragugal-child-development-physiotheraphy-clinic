@@ -23,7 +23,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 md:py-20 bg-bg-light border-b-4 border-text-dark">
+    <section className="py-16 md:py-20 bg-bg-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
         
         <SectionHeading 
@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
               >
                 {/* Visual / Icon Box */}
                 <div className="w-full lg:w-1/3 flex justify-center">
-                  <div className="p-8 bg-primary text-white border-2 border-text-dark shadow-solid-secondary rounded-lg flex items-center justify-center">
+                  <div className="p-8 bg-primary text-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
                     <Icon className="h-16 w-16 text-secondary" />
                   </div>
                 </div>

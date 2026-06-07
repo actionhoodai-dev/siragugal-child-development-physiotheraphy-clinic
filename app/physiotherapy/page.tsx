@@ -29,7 +29,7 @@ export default function PhysiotherapyHub() {
     <div className="bg-bg-light">
       
       {/* Hero Section */}
-      <section className="bg-primary text-white border-b-4 border-text-dark py-16 md:py-24">
+      <section className="bg-primary text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 text-center lg:text-left">
           <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
             Physiotherapy Department
@@ -44,7 +44,7 @@ export default function PhysiotherapyHub() {
       </section>
 
       {/* Overview Section */}
-      <section className="py-16 md:py-20 bg-white border-b-4 border-text-dark">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-8 space-y-6">
@@ -60,7 +60,7 @@ export default function PhysiotherapyHub() {
             </div>
             
             {/* Visiting Hours Callout */}
-            <div className="lg:col-span-4 bg-bg-dark text-white border-2 border-text-dark p-8 shadow-solid-secondary flex items-start gap-4">
+            <div className="lg:col-span-4 bg-bg-dark text-white border border-white/5 p-8 rounded-2xl shadow-lg flex items-start gap-4">
               <Clock className="h-8 w-8 text-secondary flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-display font-extrabold text-lg text-white uppercase tracking-tight">
@@ -79,7 +79,7 @@ export default function PhysiotherapyHub() {
       </section>
 
       {/* Treatments Grid Section */}
-      <section className="py-16 md:py-20 bg-bg-light border-b-4 border-text-dark">
+      <section className="py-16 md:py-20 bg-bg-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
           <SectionHeading 
             title="Conditions We Treat" 
@@ -92,10 +92,10 @@ export default function PhysiotherapyHub() {
               return (
                 <div 
                   key={index}
-                  className="bg-white border-2 border-text-dark p-6 flex flex-col justify-between hover:shadow-[6px_6px_0px_0px_rgba(26,26,46,1)] shadow-[4px_4px_0px_0px_rgba(26,26,46,1)] transition-shadow duration-200"
+                  className="bg-white border border-gray-100 p-6 rounded-2xl flex flex-col justify-between shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
                   <div>
-                    <div className="inline-flex items-center justify-center p-2.5 bg-secondary text-text-dark border-2 border-text-dark mb-4">
+                    <div className="inline-flex items-center justify-center p-2.5 bg-secondary/15 text-primary rounded-xl mb-4">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="tamil-text font-bold text-lg text-primary leading-tight">
@@ -146,7 +146,7 @@ export default function PhysiotherapyHub() {
           </div>
           <Link 
             href="/contact" 
-            className="btn-primary px-8 py-4 uppercase text-sm tracking-wider font-extrabold bg-primary text-white border-2 border-text-dark shadow-solid focus:outline-none"
+            className="btn btn-primary px-8 py-4 uppercase text-sm tracking-wider font-extrabold bg-primary text-white focus:outline-none"
           >
             Book Your Physiotherapy Appointment
           </Link>

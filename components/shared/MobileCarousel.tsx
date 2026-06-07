@@ -83,14 +83,14 @@ export default function MobileCarousel({ children }: MobileCarouselProps) {
         <div className="flex space-x-2">
           <button
             onClick={scrollPrev}
-            className="p-2.5 border-2 border-text-dark bg-white shadow-solid text-text-dark hover:translate-y-[-1px] active:translate-y-[1px] transition-transform focus:outline-none"
+            className="p-2.5 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 text-text-dark transition-all duration-250 focus:outline-none"
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-4 w-4" />
           </button>
           <button
             onClick={scrollNext}
-            className="p-2.5 border-2 border-text-dark bg-white shadow-solid text-text-dark hover:translate-y-[-1px] active:translate-y-[1px] transition-transform focus:outline-none"
+            className="p-2.5 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 text-text-dark transition-all duration-250 focus:outline-none"
             aria-label="Next slide"
           >
             <ChevronRight className="h-4 w-4" />

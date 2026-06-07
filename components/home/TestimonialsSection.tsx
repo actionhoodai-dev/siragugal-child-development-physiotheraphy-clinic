@@ -28,7 +28,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-16 md:py-20 bg-white border-b-4 border-text-dark">
+    <section className="py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
         
         <SectionHeading 
@@ -61,7 +61,7 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
   return (
     <motion.div
       whileHover={{ y: -6 }}
-      className="bg-bg-light border-2 border-text-dark p-6 md:p-8 flex flex-col justify-between h-full shadow-solid"
+      className="bg-bg-light border border-text-dark/5 p-6 md:p-8 flex flex-col justify-between h-full rounded-2xl shadow-[0_8px_30px_rgba(26,26,46,0.04)] hover:shadow-[0_20px_40px_rgba(26,26,46,0.08)] transition-all duration-300"
     >
       <div className="space-y-4">
         {/* Rating Stars & Quote Icon */}
@@ -90,7 +90,7 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
             {testimonial.location}
           </span>
         </div>
-        <span className="px-2.5 py-1 bg-secondary text-text-dark border border-text-dark text-[10px] font-extrabold uppercase tracking-wider">
+        <span className="px-2.5 py-1 bg-secondary text-text-dark rounded-md text-[10px] font-extrabold uppercase tracking-wider">
           {testimonial.condition}
         </span>
       </div>

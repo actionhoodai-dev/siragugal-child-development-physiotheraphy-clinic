@@ -87,7 +87,7 @@ export default function CounselingPsychologyPage() {
           {conditions.map((cond, index) => (
             <span 
               key={index} 
-              className="px-3 py-1.5 bg-bg-light border-2 border-text-dark text-xs font-bold uppercase tracking-wider text-text-dark"
+              className="px-3.5 py-1.5 bg-primary/10 text-primary rounded-lg text-xs font-bold uppercase tracking-wider"
             >
               {cond}
             </span>

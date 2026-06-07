@@ -5,7 +5,7 @@ import { Clock } from 'lucide-react';
 
 export default function StatsBar() {
   return (
-    <section className="bg-bg-dark text-white border-b-4 border-text-dark py-12 md:py-16">
+    <section className="bg-bg-dark text-white border-b border-white/10 py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           

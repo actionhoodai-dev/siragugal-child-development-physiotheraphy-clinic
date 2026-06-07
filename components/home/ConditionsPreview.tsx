@@ -15,7 +15,7 @@ export default function ConditionsPreview() {
   const scrollTags = [...conditions, ...conditions, ...conditions];
 
   return (
-    <section className="bg-bg-dark border-b-4 border-text-dark py-12 overflow-hidden">
+    <section className="bg-bg-dark py-12 overflow-hidden border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 mb-8 text-center lg:text-left">
         <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
           Conditions Treated
@@ -31,7 +31,7 @@ export default function ConditionsPreview() {
           {scrollTags.map((cond, index) => (
             <div
               key={index}
-              className="flex items-center space-x-4 bg-white border-2 border-text-dark pl-4 pr-6 py-3.5 shadow-solid-secondary flex-shrink-0"
+              className="flex items-center space-x-4 bg-white rounded-xl border border-gray-100 pl-4 pr-6 py-3.5 shadow-md flex-shrink-0"
             >
               {/* Amber left border replacement (solid box element) */}
               <div className="w-1.5 h-10 bg-secondary flex-shrink-0" />
