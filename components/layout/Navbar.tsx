@@ -110,14 +110,10 @@ export default function Navbar() {
           <Link href="/" className="flex items-center space-x-2.5 flex-shrink-0 focus:outline-none" aria-label="Siragugal Home">
             <WingsLogo />
             <div className="flex flex-col">
-              <span className={`font-display text-xl md:text-2xl font-extrabold tracking-tight leading-none transition-colors duration-300 ${
-                isScrolled ? 'text-primary' : 'text-primary md:text-white'
-              }`}>
+              <span className="font-display text-xl md:text-2xl font-extrabold text-primary tracking-tight leading-none">
                 Siragugal<span className="text-secondary font-black">.</span>
               </span>
-              <span className={`text-[9px] font-semibold uppercase tracking-wider mt-1 hidden lg:block transition-colors duration-300 ${
-                isScrolled ? 'text-text-mid' : 'text-text-mid md:text-white/75'
-              }`}>
+              <span className="text-[9px] font-semibold text-text-mid uppercase tracking-wider mt-1 hidden lg:block">
                 Child Development & Physiotherapy Center
               </span>
             </div>
@@ -127,21 +123,13 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className={`font-semibold text-sm transition-colors duration-300 ${
-                isScrolled 
-                  ? pathname === '/' ? 'text-primary' : 'text-text-dark hover:text-primary'
-                  : pathname === '/' ? 'text-primary md:text-secondary font-bold' : 'text-text-dark md:text-white/80 md:hover:text-white'
-              }`}
+              className={`font-semibold text-sm transition-colors hover:text-primary ${pathname === '/' ? 'text-primary' : 'text-text-dark'}`}
             >
               Home
             </Link>
             <Link 
               href="/about" 
-              className={`font-semibold text-sm transition-colors duration-300 ${
-                isScrolled 
-                  ? pathname === '/about' ? 'text-primary' : 'text-text-dark hover:text-primary'
-                  : pathname === '/about' ? 'text-primary md:text-secondary font-bold' : 'text-text-dark md:text-white/80 md:hover:text-white'
-              }`}
+              className={`font-semibold text-sm transition-colors hover:text-primary ${pathname === '/about' ? 'text-primary' : 'text-text-dark'}`}
             >
               About
             </Link>
@@ -156,10 +144,8 @@ export default function Navbar() {
                 href="/child-development"
                 onMouseEnter={() => setDropdownOpen(true)}
                 onClick={() => setDropdownOpen(false)}
-                className={`flex items-center font-semibold text-sm transition-colors duration-300 focus:outline-none ${
-                  isScrolled 
-                    ? pathname.startsWith('/child-development') ? 'text-primary' : 'text-text-dark hover:text-primary'
-                    : pathname.startsWith('/child-development') ? 'text-primary md:text-secondary font-bold' : 'text-text-dark md:text-white/80 md:hover:text-white'
+                className={`flex items-center font-semibold text-sm transition-colors hover:text-primary focus:outline-none ${
+                  pathname.startsWith('/child-development') ? 'text-primary' : 'text-text-dark'
                 }`}
               >
                 Child Development
@@ -206,31 +192,19 @@ export default function Navbar() {
 
             <Link 
               href="/physiotherapy" 
-              className={`font-semibold text-sm transition-colors duration-300 ${
-                isScrolled 
-                  ? pathname.startsWith('/physiotherapy') ? 'text-primary' : 'text-text-dark hover:text-primary'
-                  : pathname.startsWith('/physiotherapy') ? 'text-primary md:text-secondary font-bold' : 'text-text-dark md:text-white/80 md:hover:text-white'
-              }`}
+              className={`font-semibold text-sm transition-colors hover:text-primary ${pathname.startsWith('/physiotherapy') ? 'text-primary' : 'text-text-dark'}`}
             >
               Physiotherapy
             </Link>
             <Link 
               href="/conditions" 
-              className={`font-semibold text-sm transition-colors duration-300 ${
-                isScrolled 
-                  ? pathname === '/conditions' ? 'text-primary' : 'text-text-dark hover:text-primary'
-                  : pathname === '/conditions' ? 'text-primary md:text-secondary font-bold' : 'text-text-dark md:text-white/80 md:hover:text-white'
-              }`}
+              className={`font-semibold text-sm transition-colors hover:text-primary ${pathname === '/conditions' ? 'text-primary' : 'text-text-dark'}`}
             >
               Conditions
             </Link>
             <Link 
               href="/contact" 
-              className={`font-semibold text-sm transition-colors duration-300 ${
-                isScrolled 
-                  ? pathname === '/contact' ? 'text-primary' : 'text-text-dark hover:text-primary'
-                  : pathname === '/contact' ? 'text-primary md:text-secondary font-bold' : 'text-text-dark md:text-white/80 md:hover:text-white'
-              }`}
+              className={`font-semibold text-sm transition-colors hover:text-primary ${pathname === '/contact' ? 'text-primary' : 'text-text-dark'}`}
             >
               Contact
             </Link>

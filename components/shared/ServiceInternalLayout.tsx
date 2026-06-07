@@ -37,7 +37,7 @@ export default function ServiceInternalLayout({
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
               {title}
             </h1>
-            <p className="text-sm sm:text-base md:text-lg font-medium text-secondary leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg font-medium text-gray-200 leading-relaxed">
               {boldSentence}
             </p>
           </div>

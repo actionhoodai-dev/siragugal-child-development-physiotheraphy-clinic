@@ -29,7 +29,7 @@ export default function BreadcrumbNav({ items }: BreadcrumbNavProps) {
                 {item.name}
               </Link>
             ) : (
-              <span className="text-secondary font-bold" aria-current="page">
+              <span className="text-white font-bold" aria-current="page">
                 {item.name}
               </span>
             )}
