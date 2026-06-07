@@ -114,7 +114,7 @@ export default function ConditionsPage() {
             <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
               Clinical Scope
             </span>
-            <h1 className="text-3xl md:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight text-white">
               Conditions We Treat
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-gray-300 font-semibold leading-relaxed">

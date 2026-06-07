@@ -42,7 +42,7 @@ export default function AboutPage() {
             <span className="text-xs font-bold text-secondary uppercase tracking-widest block mb-1">
               Who We Are
             </span>
-            <h1 className="text-3xl md:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight text-white">
               About Siragugal
             </h1>
           </div>

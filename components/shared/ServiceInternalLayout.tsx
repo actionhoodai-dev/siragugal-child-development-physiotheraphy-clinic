@@ -34,7 +34,7 @@ export default function ServiceInternalLayout({
         <header className="bg-primary text-white rounded-2xl shadow-lg mb-8 md:mb-12 border border-white/5 overflow-hidden">
           <div className="p-6 md:p-8 space-y-3 max-w-4xl">
             <BreadcrumbNav items={breadcrumbs} />
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold uppercase tracking-tight leading-tight text-white">
               {title}
             </h1>
             <p className="text-sm sm:text-base md:text-lg font-medium text-gray-200 leading-relaxed">
