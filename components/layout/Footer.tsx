@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
-import { WingsLogo } from './Navbar';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -13,7 +13,13 @@ export default function Footer() {
           {/* Column 1: Clinic Brand & Address */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2.5">
-              <WingsLogo />
+              <Image 
+                src="/logo.png" 
+                alt="Siragugal Logo" 
+                width={48} 
+                height={48} 
+                className="h-12 w-12 flex-shrink-0 object-contain bg-white rounded-full p-0.5"
+              />
               <div className="flex flex-col">
                 <span className="font-display text-xl font-extrabold text-white tracking-tight leading-none">
                   Siragugal<span className="text-secondary font-black">.</span>
@@ -29,8 +35,8 @@ export default function Footer() {
             <div className="flex items-start text-sm text-gray-300 space-x-3 pt-2">
               <MapPin className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
               <span>
-                5/438, Rajivgandhi Nagar, Chinna Mudhalaipatti Road,<br />
-                Behind Murugan Kovil, Salem Road,<br />
+                5/438 - A, Rajivgandhi Nagar, Chinna Mudhalaipatti Road,<br />
+                Murugan Kovil Back side, Salem Road,<br />
                 Namakkal – 637 001
               </span>
             </div>

@@ -336,8 +336,8 @@ export default function ContactPage() {
                       Clinic Address
                     </h4>
                     <p className="text-xs md:text-sm font-bold text-text-dark mt-1">
-                      5/438, Rajivgandhi Nagar, Chinna Mudhalaipatti Road,<br />
-                      Behind Murugan Kovil, Salem Road,<br />
+                      5/438 - A, Rajivgandhi Nagar, Chinna Mudhalaipatti Road,<br />
+                      Murugan Kovil Back side, Salem Road,<br />
                       Namakkal – 637 001
                     </p>
                   </div>

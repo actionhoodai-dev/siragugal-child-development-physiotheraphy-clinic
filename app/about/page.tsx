@@ -170,9 +170,9 @@ export default function AboutPage() {
                     Address
                   </h4>
                   <p className="text-sm font-bold text-text-dark leading-relaxed">
-                    5/438, Rajivgandhi Nagar,<br />
+                    5/438 - A, Rajivgandhi Nagar,<br />
                     Chinna Mudhalaipatti Road,<br />
-                    Behind Murugan Kovil, Salem Road,<br />
+                    Murugan Kovil Back side, Salem Road,<br />
                     Namakkal – 637 001
                   </p>
                 </div>

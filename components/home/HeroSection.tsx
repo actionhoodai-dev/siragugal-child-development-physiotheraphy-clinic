@@ -122,6 +122,26 @@ export default function HeroSection() {
           {/* Left Column (60%) - Text Content second on mobile */}
           <div className="lg:col-span-7 space-y-6 md:space-y-8 order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
             
+            {/* Logo in Homepage Header */}
+            <div className="flex items-center space-x-3 mb-2">
+              <Image 
+                src="/logo.png" 
+                alt="Siragugal Logo" 
+                width={80} 
+                height={80} 
+                className="h-20 w-20 rounded-full border-2 border-white/20 bg-white p-1 shadow-lg flex-shrink-0 object-contain animate-pulse"
+                priority
+              />
+              <div className="text-left hidden sm:block">
+                <span className="font-display font-black text-white text-base md:text-lg uppercase tracking-tight block leading-none">
+                  SIRAGUGAL
+                </span>
+                <span className="text-[9px] font-semibold text-secondary uppercase tracking-widest block mt-1">
+                  CHILD DEVELOPMENT & REHAB
+                </span>
+              </div>
+            </div>
+
             {/* Pill Badge */}
             <div className="inline-flex items-center space-x-2 bg-secondary/15 border border-secondary/35 px-4 py-1.5 rounded-full">
               <Sparkles className="h-4 w-4 text-secondary fill-secondary" />
@@ -142,9 +162,9 @@ export default function HeroSection() {
             </h1>
 
             {/* Short Tagline */}
-            <div className="space-y-1">
-              <span className="text-secondary font-display font-extrabold text-lg sm:text-xl md:text-2xl tracking-wide uppercase block">
-                Specialized Treatment for All Conditions
+            <div className="space-y-1.5">
+              <span className="text-secondary font-display font-extrabold text-lg sm:text-xl md:text-2xl tracking-wide uppercase block leading-tight">
+                “Because Every Child Deserves the Chance to Shine” ✨
               </span>
               <span className="text-xs sm:text-sm md:text-base text-gray-300 font-semibold tamil-text block leading-relaxed">
                 இவைகளுக்கு சிறப்பான சிகிச்சை அளிக்கப்படும்
@@ -153,8 +173,36 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="text-sm sm:text-base md:text-lg text-white/85 font-medium leading-relaxed max-w-2xl">
-              Namakkal's premier multidisciplinary center providing expert therapeutic services combining occupational, speech, behavioral, and advanced physiotherapy care under one roof.
+              Helping children unlock their potential through expert therapy and individualized care. Our multidisciplinary center coordinates occupational, speech, behavioral, and advanced physiotherapy care under one roof.
             </p>
+
+            {/* Core Services Checklist */}
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2.5 text-xs sm:text-sm text-white/90 font-bold max-w-xl w-full pt-4 border-t border-white/10">
+              <div className="flex items-center space-x-2">
+                <span className="text-secondary font-black">✔</span>
+                <span>Physiotherapy</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-secondary font-black">✔</span>
+                <span>Occupational Therapy</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-secondary font-black">✔</span>
+                <span>Speech Therapy</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-secondary font-black">✔</span>
+                <span>Special Education</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-secondary font-black">✔</span>
+                <span>Counseling Psychology</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-secondary font-black">✔</span>
+                <span>Behaviour Therapy</span>
+              </div>
+            </div>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2 w-full sm:w-auto">

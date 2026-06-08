@@ -50,7 +50,7 @@ export default function RootLayout({
               "name": "Siragugal Child Development & Physiotherapy Center",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "5/438, Rajivgandhi Nagar, Chinna Mudhalaipatti Road, Behind Murugan Kovil, Salem Road",
+                "streetAddress": "5/438 - A, Rajivgandhi Nagar, Chinna Mudhalaipatti Road, Murugan Kovil Back side, Salem Road",
                 "addressLocality": "Namakkal",
                 "postalCode": "637001",
                 "addressCountry": "IN"

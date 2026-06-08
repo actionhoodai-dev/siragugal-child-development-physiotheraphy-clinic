@@ -8,6 +8,7 @@ import {
   Menu, X, ChevronDown, Phone, MessageCircle, 
   Activity, Brain, MessageSquare, GraduationCap, Users 
 } from 'lucide-react';
+import Image from 'next/image';
 
 const childDevServices = [
   { name: 'Occupational Therapy', href: '/child-development/occupational-therapy', icon: Activity, desc: 'Motor skill & sensory integration' },
@@ -108,7 +109,13 @@ export default function Navbar() {
           
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2.5 flex-shrink-0 focus:outline-none" aria-label="Siragugal Home">
-            <WingsLogo />
+            <Image 
+              src="/logo.png" 
+              alt="Siragugal Logo" 
+              width={48} 
+              height={48} 
+              className="h-12 w-12 flex-shrink-0 object-contain"
+            />
             <div className="flex flex-col">
               <span className="font-display text-xl md:text-2xl font-extrabold text-primary tracking-tight leading-none">
                 Siragugal<span className="text-secondary font-black">.</span>
@@ -249,7 +256,13 @@ export default function Navbar() {
             {/* Drawer Header */}
             <div className="flex justify-between items-center h-20 px-4 border-b border-gray-100 flex-shrink-0">
               <Link href="/" className="flex items-center space-x-2.5 focus:outline-none" onClick={() => setIsOpen(false)}>
-                <WingsLogo />
+                <Image 
+                  src="/logo.png" 
+                  alt="Siragugal Logo" 
+                  width={36} 
+                  height={36} 
+                  className="h-9 w-9 flex-shrink-0 object-contain"
+                />
                 <span className="font-display text-xl font-extrabold text-primary tracking-tight leading-none">
                   Siragugal<span className="text-secondary font-black">.</span>
                 </span>
