@@ -34,13 +34,19 @@ const reviews = [
 ];
 
 const GoogleWordmark = () => (
-  <svg viewBox="0 0 272 92" className="h-6 w-auto flex-shrink-0" xmlns="http://www.w3.org/2000/svg">
-    <path d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.3 81.24 25 93.5 25s22.25 9.3 22.25 22.18zm-9.74 0c0-7.62-5.7-12.87-12.51-12.87s-12.51 5.25-12.51 12.87 5.7 12.87 12.51 12.87 12.51-5.25 12.51-12.87z" fill="#EA4335"/>
-    <path d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.88 9.99-22.18 22.25-22.18s22.25 9.3 22.25 22.18zm-9.74 0c0-7.62-5.7-12.87-12.51-12.87s-12.51 5.25-12.51 12.87 5.7 12.87 12.51 12.87 12.51-5.25 12.51-12.87z" fill="#FBBC05"/>
-    <path d="M209.75 26.38v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.18 7.87 7.23 0 11.35-4.47 11.35-12.87v-3.15h-.34c-2.13 2.62-6.13 4.91-11.22 4.91-10.75 0-20.75-9.33-20.75-22.01 0-12.77 10-22.18 20.75-22.18 5.08 0 9.09 2.29 11.22 4.88h.34v-3.82h9.25zm-8.82 20.92c0-7.43-4.87-12.98-11.26-12.98-6.47 0-11.72 5.55-11.72 12.98s5.25 12.87 11.72 12.87c6.39 0 11.26-5.44 11.26-12.87z" fill="#4285F4"/>
-    <path d="M225 3v64h-9.5V3h9.5z" fill="#34A853"/>
-    <path d="M262.71 54.49l7.56 5.04c-2.44 3.61-8.32 9.87-18.15 9.87-12.23 0-21.72-9.49-21.72-22.18 0-13.11 9.58-22.18 20.67-22.18 11.18 0 16.51 9.25 18.27 14.11l1 2.51-30.08 12.44c2.31 4.54 5.92 6.81 10.92 6.81 5.04 0 8.53-2.48 10.83-6.11zm-21.89-7.73l20.08-8.29c-1.09-2.77-4.16-4.71-7.82-4.71-4.75 0-12.39 4.24-12.26 13z" fill="#EA4335"/>
-    <path d="M35 44.5h20.5c.2 1.1.3 2.4.3 3.8 0 5.8-1.59 13.89-7.64 19.95-5.92 6.06-12.77 9.25-23.16 9.25C11.37 77.5 0 60.13 0 38.75S11.37 0 35.03 0c12.94 0 22.56 5.04 29.5 11.72l-8.21 8.21c-5-4.77-11.55-8.43-21.29-8.43-16.3 0-28.78 13.19-28.78 29.5s12.48 29.5 28.78 29.5c10.42 0 16.22-4.16 20-6.19 3.03-1.51 5.04-3.61 5.88-6.81H35v-10.5z" fill="#4285F4"/>
+  <svg viewBox="0 0 106 37" className="h-5 w-auto flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none">
+    {/* G */}
+    <path d="M12.04 11.08H22.75C22.88 11.72 23.01 12.42 23.01 13.23C23.01 16.48 22.09 19.82 20.06 21.84C18.1 23.92 15.42 25 11.91 25C5.46 25 0 19.54 0 13C0 6.46 5.46 1 11.91 1C15.42 1 18.1 2.31 20.02 4.19L17.18 7.03C15.77 5.71 13.99 4.77 11.91 4.77C7.62 4.77 4.31 8.35 4.31 13C4.31 17.65 7.62 21.23 11.91 21.23C15.02 21.23 16.78 19.98 17.91 18.84C18.83 17.92 19.43 16.63 19.66 14.85H12.04V11.08Z" fill="#4285F4"/>
+    {/* o */}
+    <path d="M35.66 13C35.66 19.65 30.56 24.62 24.36 24.62C18.16 24.62 13.06 19.65 13.06 13C13.06 6.35 18.16 1.38 24.36 1.38C30.56 1.38 35.66 6.35 35.66 13ZM31.62 13C31.62 8.78 28.32 5.25 24.36 5.25C20.4 5.25 17.1 8.78 17.1 13C17.1 17.19 20.4 20.75 24.36 20.75C28.32 20.75 31.62 17.19 31.62 13Z" fill="#EA4335"/>
+    {/* o */}
+    <path d="M59.66 13C59.66 19.65 54.56 24.62 48.36 24.62C42.16 24.62 37.06 19.65 37.06 13C37.06 6.35 42.16 1.38 48.36 1.38C54.56 1.38 59.66 6.35 59.66 13ZM55.62 13C55.62 8.78 52.32 5.25 48.36 5.25C44.4 5.25 41.1 8.78 41.1 13C41.1 17.19 44.4 20.75 48.36 20.75C52.32 20.75 55.62 17.19 55.62 13Z" fill="#FBBC05"/>
+    {/* g */}
+    <path d="M82.66 2.38V23.62C82.66 32.33 77.46 35.91 71.36 35.91C65.56 35.91 62.06 32.01 60.76 28.76L64.26 27.31C64.88 28.81 67.06 31.36 71.36 31.36C75.86 31.36 78.66 28.58 78.66 23.32V21.64H78.48C77.08 23.36 74.48 24.87 70.98 24.87C64.68 24.87 58.78 19.33 58.78 12.94C58.78 6.51 64.68 1 70.98 1C74.48 1 77.08 2.51 78.48 4.19H78.66V2.38H82.66ZM79.02 12.98C79.02 8.65 75.86 5.25 71.8 5.25C67.74 5.25 64.48 8.65 64.48 12.98C64.48 17.27 67.74 20.75 71.8 20.75C75.86 20.75 79.02 17.27 79.02 12.98Z" fill="#4285F4"/>
+    {/* l */}
+    <path d="M88.66 1V24H84.66V1H88.66Z" fill="#34A853"/>
+    {/* e */}
+    <path d="M96.66 13.08C96.66 6.18 92.06 1.38 86.96 1.38C81.96 1.38 77.26 6.18 77.26 13C77.26 19.72 81.96 24.62 86.96 24.62C92.26 24.62 96.66 20.92 96.66 13.08ZM81.26 13C81.26 8.78 83.66 5.25 86.96 5.25C90.26 5.25 92.66 8.78 92.66 13C92.66 17.19 90.26 20.75 86.96 20.75C83.66 20.75 81.26 17.19 81.26 13Z" fill="#EA4335"/>
   </svg>
 );
 
@@ -49,8 +55,8 @@ export default function GoogleReviews() {
     <section className="py-16 md:py-20 bg-bg-light border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
         
-        {/* Section Heading */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        {/* Section Heading with Side-by-Side Ratings Widget and CTA Button */}
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-12 gap-6">
           <div className="space-y-2">
             <span className="text-xs font-bold text-accent uppercase tracking-widest block">
               Patient Feedback & Ratings
@@ -63,29 +69,40 @@ export default function GoogleReviews() {
             <div className="h-1 w-16 bg-primary rounded mt-3" />
           </div>
 
-          {/* Google Ratings Widget (Maps Card Style) */}
-          <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm flex items-center space-x-6 max-w-sm w-full md:w-auto">
-            <div className="flex flex-col space-y-1.5">
-              <GoogleWordmark />
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
-                Local Business Rating
-              </span>
-            </div>
-            <div className="h-12 w-[1px] bg-slate-200" />
-            <div>
-              <div className="flex items-baseline space-x-1.5">
-                <span className="font-display font-extrabold text-2xl text-slate-800 leading-none">4.9</span>
-                <span className="text-xs font-bold text-slate-400">/ 5.0</span>
+          {/* Right side container: Google widget & write review button */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
+            {/* Google Ratings Widget (Maps Card Style) */}
+            <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm flex items-center space-x-5 max-w-sm w-full sm:w-auto">
+              <div className="flex flex-col space-y-1">
+                <GoogleWordmark />
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                  Local Business Rating
+                </span>
               </div>
-              <div className="flex text-secondary mt-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-3.5 w-3.5 fill-secondary text-secondary" />
-                ))}
+              <div className="h-10 w-[1px] bg-slate-200" />
+              <div>
+                <div className="flex items-baseline space-x-1">
+                  <span className="font-display font-extrabold text-xl text-slate-800 leading-none">4.9</span>
+                  <span className="text-[10px] font-bold text-slate-400">/ 5.0</span>
+                </div>
+                <div className="flex text-secondary mt-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-3.5 w-3.5 fill-secondary text-secondary" />
+                  ))}
+                </div>
               </div>
-              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mt-1">
-                120+ verified reviews
-              </span>
             </div>
+
+            {/* Write Review CTA Button (Google Maps Blue Button UI placed at top to prevent empty gap) */}
+            <a
+              href="https://g.page/r/CdmjrSsmFqU3EBM/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center space-x-2 px-5 py-3.5 bg-[#1a73e8] hover:bg-[#1557b0] text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-200 shadow-sm hover:shadow-md focus:outline-none w-full sm:w-auto h-12"
+            >
+              <Edit className="h-4 w-4 mr-1 text-white" />
+              <span>Write a Google Review</span>
+            </a>
           </div>
         </div>
 
@@ -143,19 +160,6 @@ export default function GoogleReviews() {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* Write Review CTA Button (Google Maps Blue Button UI) */}
-        <div className="mt-12 text-center">
-        <a
-          href="https://g.page/r/CdmjrSsmFqU3EBM/review"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center space-x-2 px-6 py-3.5 bg-[#1a73e8] hover:bg-[#1557b0] text-white font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none"
-        >
-          <Edit className="h-4 w-4 mr-1 text-white" />
-          <span>Write a Google Review</span>
-        </a>
         </div>
 
       </div>

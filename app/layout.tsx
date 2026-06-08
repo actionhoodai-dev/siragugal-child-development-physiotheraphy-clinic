@@ -6,6 +6,7 @@ import ScrollProgress from '@/components/layout/ScrollProgress';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/layout/WhatsAppButton';
+import PageLoader from '@/components/shared/PageLoader';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -65,6 +66,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-bg-light text-text-dark min-h-screen flex flex-col">
+        <PageLoader />
         <ScrollProgress />
         <LenisProvider>
           <Navbar />

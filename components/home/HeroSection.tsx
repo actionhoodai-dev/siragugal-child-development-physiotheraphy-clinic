@@ -17,17 +17,31 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-bg-dark text-white overflow-hidden py-16 md:py-24">
       
-      {/* Full-Screen Background Image with increased visibility (opacity-45) */}
+      {/* Background Images optimized for layout and resolution */}
       <div className="absolute inset-0 z-0">
-        <Image 
-          src="/images/child_therapy_hero_bg.png" 
-          alt="Siragugal Child Development & Physiotherapy Center Background" 
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-45 object-center" 
-        />
-        {/* Soft, reduced-opacity gradient overlay to make the photo clearly visible while keeping text readable */}
+        {/* Desktop Landscape Background */}
+        <div className="hidden md:block absolute inset-0">
+          <Image 
+            src="/images/child_therapy_hero_bg.png" 
+            alt="Siragugal Center Background Desktop" 
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-45 object-center" 
+          />
+        </div>
+        {/* Mobile Portrait Background (Portrait layout prevents offset cropping) */}
+        <div className="block md:hidden absolute inset-0">
+          <Image 
+            src="/images/child_therapy_hero_mobile_bg.png" 
+            alt="Siragugal Center Background Mobile" 
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-35 object-center" 
+          />
+        </div>
+        {/* Soft, reduced-opacity gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-bg-dark/85 via-bg-dark/65 to-bg-dark/35" />
       </div>
 
@@ -63,26 +77,17 @@ export default function HeroSection() {
             </span>
           </div>
 
-          {/* Logo Placed In-Between Title/Tagline and Description */}
-          <div className="flex items-center space-x-4 py-3 my-4 border-y border-white/10 max-w-xl">
-            <Image 
-              src="/logo.png" 
-              alt="Siragugal Official Logo" 
-              width={80} 
-              height={80} 
-              className="h-16 w-16 sm:h-20 sm:w-20 rounded-full border border-white/20 bg-white p-1 shadow-lg flex-shrink-0 object-contain"
-              priority
-            />
-            <div className="text-left">
-              <span className="font-display font-black text-white text-base sm:text-lg uppercase tracking-tight block leading-none">
-                SIRAGUGAL
-              </span>
-              <span className="text-[9px] font-semibold text-secondary uppercase tracking-widest block mt-1.5">
-                CHILD DEVELOPMENT & REHAB
-              </span>
-              <span className="text-[10px] sm:text-xs italic text-gray-300 font-medium block mt-1">
-                "Caring Hands, Healing Tots"
-              </span>
+          {/* Medium Circular Logo Placeholder - In Between Title/Tagline and Description */}
+          <div className="flex items-center justify-start my-4">
+            <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-full border-2 border-white/20 bg-white p-1 shadow-lg overflow-hidden flex-shrink-0 animate-pulse">
+              <Image 
+                src="/logo.png" 
+                alt="Siragugal Official Logo" 
+                width={96} 
+                height={96} 
+                className="w-full h-full object-contain"
+                priority
+              />
             </div>
           </div>
 

@@ -49,7 +49,6 @@ export const WingsLogo = () => (
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -59,19 +58,6 @@ export default function Navbar() {
     setIsOpen(false);
     setDropdownOpen(false);
   }, [pathname]);
-
-  // Track scrolling to toggle opaque background
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Handle click outside desktop dropdown
   useEffect(() => {
@@ -98,11 +84,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white border-b border-gray-100 shadow-md' 
-        : 'bg-white/95 md:bg-transparent'
-    }`}>
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-100 shadow-md">
       {/* Scroll indicator hook */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
         <div className="flex justify-between items-center h-20 md:h-24">

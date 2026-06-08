@@ -2,7 +2,6 @@ import HeroSection from '@/components/home/HeroSection';
 import ServicesPreview from '@/components/home/ServicesPreview';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import ConditionsPreview from '@/components/home/ConditionsPreview';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
 import GoogleReviews from '@/components/home/GoogleReviews';
 import CTABanner from '@/components/home/CTABanner';
 import { getMetadata } from '@/lib/metadata';
@@ -20,7 +19,6 @@ export default function Home() {
       <ServicesPreview />
       <WhyChooseUs />
       <ConditionsPreview />
-      <TestimonialsSection />
       <GoogleReviews />
       <CTABanner />
     </>
