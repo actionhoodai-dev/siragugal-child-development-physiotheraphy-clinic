@@ -147,15 +147,15 @@ export default function GoogleReviews() {
 
         {/* Write Review CTA Button (Google Maps Blue Button UI) */}
         <div className="mt-12 text-center">
-          <a
-            href="https://search.google.com/local/writereview?placeid=ChIJ0-T7l2xVqDsRkX3Xq4Xq4Q8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-6 py-3.5 bg-[#1a73e8] hover:bg-[#1557b0] text-white font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none"
-          >
-            <Edit className="h-4 w-4 mr-1 text-white" />
-            <span>Write a Google Review</span>
-          </a>
+        <a
+          href="https://g.page/r/CdmjrSsmFqU3EBM/review"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center space-x-2 px-6 py-3.5 bg-[#1a73e8] hover:bg-[#1557b0] text-white font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none"
+        >
+          <Edit className="h-4 w-4 mr-1 text-white" />
+          <span>Write a Google Review</span>
+        </a>
         </div>
 
       </div>

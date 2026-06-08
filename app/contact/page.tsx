@@ -100,12 +100,24 @@ export default function ContactPage() {
     setIsSubmitting(true);
     setSubmitError('');
     try {
-      // Simulate API submit latency
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const resData = await response.json();
+
+      if (!response.ok) {
+        throw new Error(resData.error || 'Failed to send message');
+      }
+
       setSubmitSuccess(true);
       reset();
-    } catch (err) {
-      setSubmitError('Failed to send message. Please try again or call us directly.');
+    } catch (err: any) {
+      setSubmitError(err.message || 'Failed to send message. Please try again or call us directly.');
     } finally {
       setIsSubmitting(false);
     }

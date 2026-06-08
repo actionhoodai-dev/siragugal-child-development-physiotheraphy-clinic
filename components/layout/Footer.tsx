@@ -29,6 +29,9 @@ export default function Footer() {
                 </span>
               </div>
             </div>
+            <p className="text-white/95 font-display font-extrabold italic text-xs tracking-wider uppercase">
+              "Caring Hands, Healing Tots"
+            </p>
             <p className="text-secondary font-semibold tamil-text text-sm leading-relaxed">
               இவைகளுக்கு சிறப்பான சிகிச்சை அளிக்கப்படும்.
             </p>
