@@ -70,10 +70,7 @@ export default function HeroSection() {
           {/* Short Tagline */}
           <div className="space-y-2">
             <span className="text-secondary font-display font-extrabold text-lg sm:text-xl md:text-2xl tracking-wide uppercase block leading-tight">
-              “Because Every Child Deserves the Chance to Shine” ✨
-            </span>
-            <span className="text-xs sm:text-sm md:text-base text-gray-300 font-semibold tamil-text block leading-relaxed">
-              இவைகளுக்கு சிறப்பான சிகிச்சை அளிக்கப்படும்
+              "Caring Hands, Healing Tots" ✨
             </span>
           </div>
 

@@ -32,9 +32,6 @@ export default function Footer() {
             <p className="text-white/95 font-display font-extrabold italic text-xs tracking-wider uppercase">
               "Caring Hands, Healing Tots"
             </p>
-            <p className="text-secondary font-semibold tamil-text text-sm leading-relaxed">
-              இவைகளுக்கு சிறப்பான சிகிச்சை அளிக்கப்படும்.
-            </p>
             <div className="flex items-start text-sm text-gray-300 space-x-3 pt-2">
               <MapPin className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
               <span>

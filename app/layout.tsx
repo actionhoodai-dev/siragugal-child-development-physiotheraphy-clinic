@@ -32,6 +32,10 @@ const notoTamil = Noto_Sans_Tamil({
 export const metadata: Metadata = {
   title: 'Siragugal Child Development & Physiotherapy Center | Namakkal',
   description: 'Namakkal\'s #1 center for pediatric therapy and physical rehabilitation. High-quality occupational, speech, behavioral therapy & physiotherapy.',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({

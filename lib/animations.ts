@@ -1,12 +1,19 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Register ScrollTrigger client-side helper
-export function initScrollTrigger() {
+// Ensure ScrollTrigger is registered before any animation that needs it.
+// Safe to call multiple times — GSAP deduplicates.
+function ensureScrollTrigger() {
   if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
   }
 }
+
+// Legacy export kept for any callers
+export function initScrollTrigger() {
+  ensureScrollTrigger();
+}
+
 
 // Hero Text Reveal: Staggers words in with vertical movement and opacity
 export function animateHeroText(containerSelector: string) {
@@ -33,6 +40,7 @@ export function animateHeroText(containerSelector: string) {
 // Section Headings: clipPath wipe reveal (clipPath: inset(0 100% 0 0) -> inset(0 0% 0 0))
 export function animateSectionHeading(elementSelector: string) {
   if (typeof window === 'undefined') return;
+  ensureScrollTrigger();
   const elements = document.querySelectorAll(elementSelector);
   
   elements.forEach((el) => {
@@ -56,6 +64,7 @@ export function animateSectionHeading(elementSelector: string) {
 // Parallax backgrounds: All full-width banner sections move at speed factor
 export function animateParallax(elementSelector: string, speed = 0.4) {
   if (typeof window === 'undefined') return;
+  ensureScrollTrigger();
   const elements = document.querySelectorAll(elementSelector);
 
   elements.forEach((el) => {
@@ -80,6 +89,7 @@ export function animateParallax(elementSelector: string, speed = 0.4) {
 // Number counters: Stats animate from 0 to target number when scrolled into view
 export function animateCounter(elementSelector: string, targetValue: number, duration = 2) {
   if (typeof window === 'undefined') return;
+  ensureScrollTrigger();
   const elements = document.querySelectorAll(elementSelector);
 
   elements.forEach((el) => {
@@ -103,6 +113,7 @@ export function animateCounter(elementSelector: string, targetValue: number, dur
 // Horizontal card reveal: cards slide in from alternating left/right with stagger on scroll
 export function animateCardsReveal(containerSelector: string, cardSelector: string) {
   if (typeof window === 'undefined') return;
+  ensureScrollTrigger();
   const container = document.querySelector(containerSelector);
   if (!container) return;
 
