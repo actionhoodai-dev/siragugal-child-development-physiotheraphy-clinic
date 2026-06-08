@@ -1,5 +1,4 @@
 import HeroSection from '@/components/home/HeroSection';
-import StatsBar from '@/components/home/StatsBar';
 import ServicesPreview from '@/components/home/ServicesPreview';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import ConditionsPreview from '@/components/home/ConditionsPreview';
@@ -18,7 +17,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <StatsBar />
       <ServicesPreview />
       <WhyChooseUs />
       <ConditionsPreview />

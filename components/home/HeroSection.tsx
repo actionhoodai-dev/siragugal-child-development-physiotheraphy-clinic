@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, Sparkles } from 'lucide-react';
+import { Phone, Mail, Sparkles, Clock } from 'lucide-react';
 import { animateHeroText } from '@/lib/animations';
 
 export default function HeroSection() {
@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-bg-dark text-white overflow-hidden py-16 md:py-24">
       
-      {/* Full-Screen Background Image with opacity */}
+      {/* Full-Screen Background Image with increased visibility (opacity-45) */}
       <div className="absolute inset-0 z-0">
         <Image 
           src="/images/child_therapy_hero_bg.png" 
@@ -25,40 +25,20 @@ export default function HeroSection() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-20 object-center" 
+          className="object-cover opacity-45 object-center" 
         />
-        {/* Dark gradient overlay to ensure high contrast and professional readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-bg-dark via-bg-dark/95 to-bg-dark/80" />
+        {/* Soft, reduced-opacity gradient overlay to make the photo clearly visible while keeping text readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-bg-dark/85 via-bg-dark/65 to-bg-dark/35" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 w-full z-10 relative">
         <div className="max-w-4xl space-y-6 md:space-y-8 text-left">
           
-          {/* Logo in Homepage Header */}
-          <div className="flex items-center space-x-3 mb-2">
-            <Image 
-              src="/logo.png" 
-              alt="Siragugal Logo" 
-              width={80} 
-              height={80} 
-              className="h-16 w-16 md:h-20 md:w-20 rounded-full border-2 border-white/20 bg-white p-1 shadow-lg flex-shrink-0 object-contain"
-              priority
-            />
-            <div className="text-left">
-              <span className="font-display font-black text-white text-base md:text-lg uppercase tracking-tight block leading-none">
-                SIRAGUGAL
-              </span>
-              <span className="text-[9px] font-semibold text-secondary uppercase tracking-widest block mt-1.5">
-                CHILD DEVELOPMENT & PHYSIOTHERAPY CENTER
-              </span>
-            </div>
-          </div>
-
           {/* Pill Badge */}
           <div className="inline-flex items-center space-x-2 bg-secondary/15 border border-secondary/35 px-4 py-1.5 rounded-full">
             <Sparkles className="h-4 w-4 text-secondary fill-secondary" />
             <span className="text-xs md:text-sm font-extrabold text-secondary uppercase tracking-wider">
-              Caring Hands, Healing Tots
+              Premier Rehabilitation Center
             </span>
           </div>
 
@@ -81,6 +61,29 @@ export default function HeroSection() {
             <span className="text-xs sm:text-sm md:text-base text-gray-300 font-semibold tamil-text block leading-relaxed">
               இவைகளுக்கு சிறப்பான சிகிச்சை அளிக்கப்படும்
             </span>
+          </div>
+
+          {/* Logo Placed In-Between Title/Tagline and Description */}
+          <div className="flex items-center space-x-4 py-3 my-4 border-y border-white/10 max-w-xl">
+            <Image 
+              src="/logo.png" 
+              alt="Siragugal Official Logo" 
+              width={80} 
+              height={80} 
+              className="h-16 w-16 sm:h-20 sm:w-20 rounded-full border border-white/20 bg-white p-1 shadow-lg flex-shrink-0 object-contain"
+              priority
+            />
+            <div className="text-left">
+              <span className="font-display font-black text-white text-base sm:text-lg uppercase tracking-tight block leading-none">
+                SIRAGUGAL
+              </span>
+              <span className="text-[9px] font-semibold text-secondary uppercase tracking-widest block mt-1.5">
+                CHILD DEVELOPMENT & REHAB
+              </span>
+              <span className="text-[10px] sm:text-xs italic text-gray-300 font-medium block mt-1">
+                "Caring Hands, Healing Tots"
+              </span>
+            </div>
           </div>
 
           {/* Description */}
@@ -132,7 +135,7 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          {/* Contact Strip */}
+          {/* Contact & Hours Strip */}
           <div className="pt-6 border-t border-white/10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-bold text-white/95 justify-start w-full">
             <a 
               href="tel:+917338833962" 
@@ -150,6 +153,10 @@ export default function HeroSection() {
               <Mail className="h-4 w-4 text-secondary mr-2" />
               siragugalrehab@gmail.com
             </a>
+            <div className="flex items-center text-white/90">
+              <Clock className="h-4 w-4 text-secondary mr-2" />
+              <span>Mon - Sat: 9:30 AM - 8:00 PM</span>
+            </div>
           </div>
 
         </div>
