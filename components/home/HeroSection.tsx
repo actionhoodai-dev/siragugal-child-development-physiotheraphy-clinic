@@ -52,7 +52,7 @@ export default function HeroSection() {
           <div className="inline-flex items-center space-x-2 bg-secondary/15 border border-secondary/35 px-4 py-1.5 rounded-full">
             <Sparkles className="h-4 w-4 text-secondary fill-secondary" />
             <span className="text-xs md:text-sm font-extrabold text-secondary uppercase tracking-wider">
-              Premier Rehabilitation Center
+              Namakkal's #1 Child Development & Physiotherapy Centre
             </span>
           </div>
 
