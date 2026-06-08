@@ -408,11 +408,11 @@ export default function ContactPage() {
               <div className="border border-gray-100 rounded-xl overflow-hidden shadow-md w-full h-64 md:h-72">
                 <iframe
                   title="Siragugal Clinic Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.869032688005!2d78.165411!3d11.218900000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab070000000001%3A0x0!2zMTHCsDEzJzA4LjAiTiA3OMKwMDknNTUuNSJFOA!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.2479040432945!2d78.16484627007098!3d11.243165225983294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babcffb7c614db5%3A0x37a516262bada3d9!2sSiragugal%20Therapy%20Center!5e0!3m2!1sen!2sin!4v1780922014159!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
-                  allowFullScreen={false}
+                  allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
