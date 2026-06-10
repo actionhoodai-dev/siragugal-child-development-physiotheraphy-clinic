@@ -49,13 +49,13 @@ export default function PageLoader() {
             <motion.div
               animate={{ scale: [1, 1.05, 1], opacity: [0.9, 1, 0.9] }}
               transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
-              className="h-28 w-28 rounded-full border-4 border-primary/10 p-2 bg-white shadow-xl flex items-center justify-center"
+              className="h-40 w-40 rounded-full border-4 border-primary/10 p-2 bg-white shadow-xl flex items-center justify-center"
             >
               <Image 
                 src="/logo.png" 
                 alt="Siragugal Logo" 
-                width={112} 
-                height={112} 
+                width={160} 
+                height={160} 
                 className="object-contain w-full h-full"
                 priority
               />
