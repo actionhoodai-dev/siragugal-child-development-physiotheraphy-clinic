@@ -163,10 +163,15 @@ export default function AboutPage() {
             <div className="lg:col-span-5 space-y-6">
               
               {/* Address card */}
-              <div className="bg-white border border-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4">
-                <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+              <a 
+                href="https://www.google.com/maps/place/Siragugal+Therapy+Center/@11.2431652,78.1648462,17z/data=!3m1!4b1!4m6!3m5!1s0x3babcffb7c614db5:0x37a516262bada3d9!8m2!3d11.2431652!4d78.1648462!16s%2Fg%2F11sbpxh50r"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white border border-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4 cursor-pointer group"
+              >
+                <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1 group-hover:text-secondary transition-colors" />
                 <div>
-                  <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary mb-1">
+                  <h4 className="font-display font-extrabold text-sm uppercase tracking-wider text-primary mb-1 group-hover:text-secondary transition-colors">
                     Address
                   </h4>
                   <p className="text-sm font-bold text-text-dark leading-relaxed">
@@ -175,8 +180,11 @@ export default function AboutPage() {
                     Murugan Kovil Back side, Salem Road,<br />
                     Namakkal – 637 001
                   </p>
+                  <span className="text-[11px] text-secondary font-extrabold mt-1 inline-flex items-center gap-1 group-hover:underline">
+                    Open in Google Maps →
+                  </span>
                 </div>
-              </div>
+              </a>
 
               {/* Hours card */}
               <div className="bg-white border border-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 flex items-start gap-4">
@@ -208,17 +216,29 @@ export default function AboutPage() {
             </div>
 
             {/* Map Column */}
-            <div className="lg:col-span-7 border border-gray-100 rounded-xl overflow-hidden shadow-md w-full h-80 md:h-[400px]">
-              <iframe
-                title="Siragugal Clinic Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.2479040432945!2d78.16484627007098!3d11.243165225983294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babcffb7c614db5%3A0x37a516262bada3d9!2sSiragugal%20Therapy%20Center!5e0!3m2!1sen!2sin!4v1780922014159!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            <div className="lg:col-span-7 space-y-4">
+              <div className="border border-gray-100 rounded-xl overflow-hidden shadow-md w-full h-80">
+                <iframe
+                  title="Siragugal Clinic Location Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.2479040432945!2d78.16484627007098!3d11.243165225983294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babcffb7c614db5%3A0x37a516262bada3d9!2sSiragugal%20Therapy%20Center!5e0!3m2!1sen!2sin!4v1780922014159!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <a
+                href="https://www.google.com/maps/place/Siragugal+Therapy+Center/@11.2431652,78.1648462,17z/data=!3m1!4b1!4m6!3m5!1s0x3babcffb7c614db5:0x37a516262bada3d9!8m2!3d11.2431652!4d78.1648462!16s%2Fg%2F11sbpxh50r"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center btn btn-secondary py-3.5 text-sm uppercase tracking-wider w-full text-center"
+                aria-label="Visit Us on Google Maps"
+              >
+                <MapPin className="h-5 w-5 mr-2" />
+                Visit Us (Google Maps)
+              </a>
             </div>
 
           </div>

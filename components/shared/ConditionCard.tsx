@@ -102,7 +102,7 @@ export default function ConditionCard({
               <div className="flex items-start p-4 bg-secondary/10 border-l-4 border-secondary text-sm text-text-dark">
                 <AlertCircle className="h-5 w-5 text-secondary mr-3 flex-shrink-0 mt-0.5" />
                 <p className="font-bold">
-                  Early diagnosis leads to significantly better outcomes — contact us for a free screening call.
+                  Early diagnosis leads to significantly better outcomes — contact us for a screening call.
                 </p>
               </div>
 

@@ -127,7 +127,7 @@ export default function HeroSection() {
               href="/contact" 
               className="btn btn-secondary text-center w-full sm:w-auto px-6 py-3.5 text-sm font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200"
             >
-              Book Free Consultation
+              Book Consultation
             </Link>
             <Link 
               href="/child-development" 

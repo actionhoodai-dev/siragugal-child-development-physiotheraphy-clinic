@@ -22,7 +22,7 @@ export default function ServiceInternalLayout({
   title,
   boldSentence,
   breadcrumbs,
-  ctaText = 'Book a Free Assessment',
+  ctaText = 'Book an Assessment',
   imageUrl,
   children,
 }: ServiceInternalLayoutProps) {

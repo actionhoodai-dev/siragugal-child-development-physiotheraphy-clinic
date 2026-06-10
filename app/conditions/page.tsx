@@ -199,7 +199,7 @@ export default function ConditionsPage() {
                 href="/contact" 
                 className="btn btn-secondary px-8 py-3.5 inline-block uppercase text-xs md:text-sm tracking-wider font-extrabold"
               >
-                Request a Free Screening Call
+                Request a Screening Call
               </Link>
             </div>
 
