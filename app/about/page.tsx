@@ -157,10 +157,10 @@ export default function AboutPage() {
             subtitle="LOCATION, ACCESSIBILITY, AND VISITING HOURS" 
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-10">
+          <div className="space-y-12 mt-10">
             
-            {/* Info Column */}
-            <div className="lg:col-span-5 space-y-6">
+            {/* Info Cards Row */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               
               {/* Address card */}
               <a 
@@ -215,9 +215,9 @@ export default function AboutPage() {
 
             </div>
 
-            {/* Map Column */}
-            <div className="lg:col-span-7 space-y-4">
-              <div className="border border-gray-100 rounded-xl overflow-hidden shadow-md w-full h-80">
+            {/* Full Width Map Column */}
+            <div className="space-y-4">
+              <div className="border border-gray-100 rounded-xl overflow-hidden shadow-md w-full h-96 md:h-[450px]">
                 <iframe
                   title="Siragugal Clinic Location Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.2479040432945!2d78.16484627007098!3d11.243165225983294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babcffb7c614db5%3A0x37a516262bada3d9!2sSiragugal%20Therapy%20Center!5e0!3m2!1sen!2sin!4v1780922014159!5m2!1sen!2sin"
